@@ -173,6 +173,21 @@
   .modal-section { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #eee; }
   .modal-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: #888; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
   .tip-highlight { color: #c0392b; font-weight: 700; }
+  .abstract {
+    background: #f7f7f5;
+    border-left: 3px solid #4b6cb7;
+    padding: 0.9rem 1.1rem;
+    margin: 1.1rem 0 0;
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: #444;
+  }
+  .abstract .byline {
+    margin-top: 0.65rem;
+    font-size: 0.75rem;
+    color: #999;
+    font-style: italic;
+  }
 </style>
 </head>
 <body>
@@ -181,6 +196,24 @@
     <h1>VM 2026 Prediksjoner</h1>
     <p id="generated-ts">Laster...</p>
   </header>
+
+  <div class="abstract">
+    Prediksjonsmodellen benytter bivariat Poisson-regresjon med Dixon–Coles-korreksjon for
+    kovarians mellom lavskårsutfall. Angrepsstyrke <em>a<sub>i</sub></em> og
+    forsvarsstyrke <em>d<sub>i</sub></em> per lag samt korrelasjonsparameter <em>ρ</em>
+    estimeres ved maximum likelihood-optimalisering (L-BFGS-B) på samtlige spilte
+    VM 2026-kamper, vektet med eksponentiell tidsforfall (<em>δ</em>&nbsp;=&nbsp;0,005&nbsp;d⁻¹).
+    FIFAs verdensrangering (juni 2026) inngår som apriori gjennom L2-regularisering,
+    slik at estimatene er robuste ved få observasjoner.
+    Kampresultater beregnes over et 7&nbsp;×&nbsp;7 skårgrid; sannsynligheter for seier,
+    uavgjort og tap utledes som marginalsummer, og «fair odds» rapporteres som 1/<em>P</em>.
+    Tipsforslaget er det mest sannsynlige eksaktskåret innenfor det mest sannsynlige
+    utfallet (H/U/B), ikke det statistiske moduset over hele fordelingen.
+    Prediktiv treffsikkerhet evalueres med Brier score, log-loss og treffrater for
+    eksaktskår og utfall, og oppdateres automatisk etter hvert spilte kamp.
+    <span id="abstract-metrics">Ingen evaluerte kamper ennå.</span>
+    <div class="byline">Vibekodet med Claude Code av Susanne Sandell.</div>
+  </div>
 
   <div id="modal-backdrop" class="modal-backdrop" role="dialog" aria-modal="true">
     <div class="modal-card">
@@ -480,6 +513,18 @@ async function load() {
 
     renderMatches(data.upcoming || []);
     renderMetrics(data.metrics);
+
+    if (data.metrics) {
+      const mt = data.metrics;
+      const el = document.getElementById('abstract-metrics');
+      if (el) {
+        el.textContent = `Basert på ${mt.n_evaluated} evaluerte kamper: `
+          + `Brier score ${mt.brier_score.toFixed(3)}, `
+          + `log-loss ${mt.log_loss != null ? mt.log_loss.toFixed(3) : '–'}, `
+          + `utfallstreff ${(mt.outcome_hit_rate * 100).toFixed(0)} %, `
+          + `eksakttreff ${(mt.exact_hit_rate * 100).toFixed(0)} %.`;
+      }
+    }
 
     document.getElementById('loading').style.display = 'none';
     document.getElementById('content').style.display = 'block';
