@@ -1,0 +1,84 @@
+Vi skal bygge et VM 2026 resultat-prediksjonssystem i dette repoet. Start i
+PLANNING MODE: ikke skriv kode ennå. Lever en plan jeg kan godkjenne først, og
+flagg de åpne beslutningspunktene nederst eksplisitt.
+
+## Mål
+Et Python-system som daglig henter ferske VM 2026-kampresultater, kalibrerer en
+statistisk modell, og publiserer prediksjoner til en statisk nettside jeg kan
+åpne fra mobil. Hver dag skal jeg kunne hente de ferskeste prediksjonene (eksakt
+skår + H/U/B-sannsynligheter + "fair odds") for kommende kamper, til en
+tippekonkurranse i vennegjengen. Systemet skal også lagre prediksjonshistorikk
+og måle hvor godt modellen treffer over tid.
+
+## Datakilde (verifisert)
+Kampdata: openfootball/worldcup.json — gratis, public domain, ingen API-nøkkel:
+https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json
+Format: {"matches":[{"date","team1","team2","group","score":{"ft":[h,a],"ht":[..]}}]}.
+Spilte kamper har "score.ft"; kommende mangler det. Per nå: 32 spilt, 72 gjenstår,
+midt i gruppespillet. Knockout-kamper har placeholder-lagnavn ("Winner Group A"
+osv.) som må filtreres bort til de er avgjort.
+
+## Modell (utgangspunkt — forbedre i planning)
+Poisson-basert med angreps-/forsvarsstyrke per lag, Dixon-Coles-korreksjon for
+lavskårskamper. FIFA-ranking som a priori styrke; faktiske VM-2026-resultater
+trekker estimatet via maximum-likelihood-tilpasning, regularisert mot prior slik
+at få kamper ikke gir ekstreme verdier. "Tyngre kalibrering" ønskes: vurder
+skikkelig MLE (f.eks. scipy.optimize) framfor enkel koordinatoppdatering, tids-
+vekting av kamper, og estimering av Dixon-Coles rho og hjemme-/nøytralbane-effekt.
+Output per kommende kamp: mest sannsynlig eksakt skår, P(H)/P(U)/P(B), og fair
+odds = 1/p. Begrunn modellvalg; ikke overselg ML der datagrunnlaget (få kamper)
+ikke forsvarer det.
+
+## Prediksjonshistorikk og treffsikkerhet
+Lagre hver dags prediksjoner versjonert (dato-stemplet). Når en kamp er ferdig-
+spilt, sammenlign prediksjon mot faktisk resultat og beregn løpende: Brier score
+og log-loss på H/U/B, treffrate på eksakt skår, treffrate på utfall. Vis dette
+som egen seksjon på siden så jeg ser om modellen faktisk er god. Historikken må
+overleve på tvers av kjøringer (committes til repoet).
+
+## Nettside
+Statisk side (GitHub Pages) som leser en committet prediksjonsfil (f.eks.
+data.json) og rendrer kommende kamper + historikk/treffsikkerhet. Mobilvennlig,
+ren og lettlest. Ingen tung beregning i nettleseren — Python gjør jobben i CI,
+siden viser resultatet.
+
+## Drift / automatisering
+GitHub Actions skal kjøre Python-skriptet automatisk. Workflow skal committe
+oppdatert data.json + historikk og deploye Pages. Bruk innebygd GITHUB_TOKEN;
+ikke be om personlige tokens med mindre strengt nødvendig — forklar i så fall
+hvorfor. Husk at en schedulert workflow som committer tilbake til repoet trenger
+riktige permissions (contents: write) i workflow-fila.
+
+## Kodekvalitet (følg disse)
+- Vedlikeholdbar, eksplisitt, deklarativ kode. Funksjonelle/rene funksjoner der
+  praktisk. Tidlige returer og guard clauses; unngå dyp nesting.
+- Del kompleks logikk i små, tydelig navngitte enheter. Unngå duplisering.
+- Kommenter kun ikke-åpenbar logikk, begrensninger eller ytelsesworkarounds.
+- Korrekt håndtering av norske tegn (UTF-8) i all I/O og på siden.
+- requirements.txt + virtuelt miljø. Pen prosjektstruktur.
+
+## Repo og oppsett
+- Dette repoet er tomt og klart til bruk. Du eier hele mappestrukturen.
+- Repoet skal være offentlig (ønsket). Sett opp git-integrasjon og GitHub Pages.
+- Jeg er innlogget på GitHub i nettleseren. Sjekk `gh auth status` for CLI-
+  autentisering; hvis gh mangler eller mangler riktig scope (repo, workflow),
+  si fra hvilken kommando jeg skal kjøre. Anta ikke at nettleser-innlogging gir
+  deg push-rettigheter fra terminalen.
+- Spør meg om ønsket repo-navn / synlighet før du oppretter eller endrer
+  remote-innstillinger.
+
+## Åpne beslutningspunkter — utred disse i planning og gi en anbefaling med
+## tradeoffs, så velger jeg:
+1. OPPDATERINGSSTRATEGI: (a) kun daglig cron, enklest; (b) daglig cron + live
+   henting av committet data.json + mulighet for manuell trigger (workflow_dispatch)
+   før kampdager; (c) ditt forslag. Vurder kompleksitet vs. hvor "ferske"
+   prediksjonene blir, og hva som faktisk er nyttig på mobil.
+2. FIFA-RANKING-KILDE: automatisk ranking ønskes. Utred: scraping av offisiell
+   FIFA-ranking vs. gratis ranking-API vs. en annen pålitelig kilde. Vurder
+   stabilitet, lovlighet/robusthet av scraping, og hvor ofte ranking faktisk
+   trenger oppdatering under et VM. Anbefal én, med fallback til en statisk
+   innebygd tabell hvis kilden feiler.
+
+Lever planen som: arkitektur-skisse, filstruktur, de to anbefalingene over,
+rekkefølge på implementasjonssteg, og hva du trenger fra meg (f.eks. GitHub-
+autorisasjon, repo-navn). Vent på min godkjenning før du implementerer.

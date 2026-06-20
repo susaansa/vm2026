@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VM 2026 Prediksjoner</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #f4f5f7;
+    color: #1a1a2e;
+    padding: 1rem;
+  }
+
+  .container { max-width: 900px; margin: 0 auto; }
+
+  header {
+    background: #c0392b;
+    color: white;
+    padding: 1.25rem 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+  }
+  header h1 { font-size: 1.5rem; font-weight: 700; }
+  header p { font-size: 0.85rem; opacity: 0.85; margin-top: 0.25rem; }
+
+  section { margin-bottom: 2rem; }
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #c0392b;
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid #c0392b;
+    padding-bottom: 0.3rem;
+  }
+
+  .table-wrap { overflow-x: auto; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+
+  table { width: 100%; border-collapse: collapse; background: white; }
+  th {
+    background: #2c3e50;
+    color: white;
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  td { padding: 0.6rem 0.75rem; font-size: 0.85rem; border-bottom: 1px solid #eef0f3; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #fdf5f5; }
+
+  .date-row td {
+    background: #f0f0f0;
+    font-weight: 600;
+    font-size: 0.78rem;
+    color: #555;
+    padding: 0.35rem 0.75rem;
+  }
+
+  .team { font-weight: 600; }
+  .vs { color: #888; margin: 0 0.25rem; }
+
+  .prob-cell { white-space: nowrap; }
+  .prob-bar {
+    display: flex;
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 4px;
+    background: #e8e8e8;
+  }
+  .prob-h { background: #2ecc71; }
+  .prob-u { background: #f39c12; }
+  .prob-b { background: #3498db; }
+
+  .score-pill {
+    display: inline-block;
+    background: #c0392b;
+    color: white;
+    border-radius: 4px;
+    padding: 0.15rem 0.5rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+
+  .odds { color: #555; font-size: 0.8rem; }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.75rem;
+  }
+  .metric-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,.08);
+  }
+  .metric-value { font-size: 1.8rem; font-weight: 700; color: #c0392b; }
+  .metric-label { font-size: 0.75rem; color: #666; margin-top: 0.3rem; }
+
+  .status { padding: 2rem; text-align: center; color: #888; }
+  .error { color: #c0392b; }
+
+  footer { font-size: 0.75rem; color: #aaa; text-align: center; margin-top: 2rem; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>VM 2026 Prediksjoner</h1>
+    <p id="generated-ts">Laster...</p>
+  </header>
+
+  <div id="loading" class="status">Henter prediksjoner...</div>
+  <div id="error" class="status error" style="display:none"></div>
+  <div id="content" style="display:none">
+
+    <section>
+      <h2>Kommende kamper</h2>
+      <div class="table-wrap">
+        <table id="matches-table">
+          <thead>
+            <tr>
+              <th>Kamp</th>
+              <th>Gruppe</th>
+              <th>Beste skår</th>
+              <th>H&nbsp;&nbsp;&nbsp;U&nbsp;&nbsp;&nbsp;B</th>
+              <th>Fair odds</th>
+            </tr>
+          </thead>
+          <tbody id="matches-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Modellens treffsikkerhet</h2>
+      <div id="metrics-section"></div>
+    </section>
+
+  </div>
+</div>
+
+<footer>
+  Modell: Poisson-Dixon-Coles, kalibrert mot spilte VM-kamper.
+  Data: <a href="https://github.com/openfootball/worldcup.json">openfootball</a>.
+</footer>
+
+<script>
+const pct = (v) => (v * 100).toFixed(1) + '%';
+const fmt2 = (v) => v != null ? v.toFixed(2) : '–';
+
+function renderDate(isoDate) {
+  const d = new Date(isoDate + 'T12:00:00');
+  return d.toLocaleDateString('no-NO', { weekday: 'short', day: 'numeric', month: 'short' });
+}
+
+function renderMatches(upcoming) {
+  const tbody = document.getElementById('matches-body');
+  if (!upcoming.length) {
+    tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:#888">Ingen kommende kamper med prediksjoner.</td></tr>';
+    return;
+  }
+
+  let lastDate = null;
+  upcoming.forEach((m) => {
+    if (m.date !== lastDate) {
+      lastDate = m.date;
+      const dr = document.createElement('tr');
+      dr.className = 'date-row';
+      dr.innerHTML = `<td colspan="5">${renderDate(m.date)}</td>`;
+      tbody.appendChild(dr);
+    }
+
+    const row = document.createElement('tr');
+
+    const barW = (p) => `width:${(p * 100).toFixed(1)}%`;
+    row.innerHTML = `
+      <td><span class="team">${m.team1}</span><span class="vs">–</span><span class="team">${m.team2}</span></td>
+      <td>${m.group || '–'}</td>
+      <td><span class="score-pill">${m.best_score}</span></td>
+      <td class="prob-cell">
+        ${pct(m.ph)}&nbsp; ${pct(m.pu)}&nbsp; ${pct(m.pb)}
+        <div class="prob-bar">
+          <div class="prob-h" style="${barW(m.ph)}"></div>
+          <div class="prob-u" style="${barW(m.pu)}"></div>
+          <div class="prob-b" style="${barW(m.pb)}"></div>
+        </div>
+      </td>
+      <td class="odds">${fmt2(m.odds_h)} / ${fmt2(m.odds_u)} / ${fmt2(m.odds_b)}</td>
+    `;
+    tbody.appendChild(row);
+  });
+}
+
+function renderMetrics(metrics) {
+  const el = document.getElementById('metrics-section');
+  if (!metrics || !metrics.n_evaluated) {
+    el.innerHTML = '<p style="color:#888">Ingen evaluerte prediksjoner ennå. Treffsikkerhet vises etter at spilte kamper er registrert.</p>';
+    return;
+  }
+  el.innerHTML = `
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-value">${pct(metrics.outcome_hit_rate)}</div>
+        <div class="metric-label">Riktig utfall (H/U/B)</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">${pct(metrics.exact_hit_rate)}</div>
+        <div class="metric-label">Riktig eksaktskår</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">${metrics.brier_score.toFixed(3)}</div>
+        <div class="metric-label">Brier score (lavere = bedre)</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">${metrics.log_loss != null ? metrics.log_loss.toFixed(3) : '–'}</div>
+        <div class="metric-label">Log-loss (lavere = bedre)</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">${metrics.n_evaluated}</div>
+        <div class="metric-label">Evaluerte kamper</div>
+      </div>
+    </div>
+  `;
+}
+
+async function load() {
+  try {
+    const res = await fetch('data.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+
+    if (data.generated) {
+      const ts = new Date(data.generated);
+      document.getElementById('generated-ts').textContent =
+        'Sist oppdatert: ' + ts.toLocaleString('no-NO');
+    }
+
+    renderMatches(data.upcoming || []);
+    renderMetrics(data.metrics);
+
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+  } catch (err) {
+    document.getElementById('loading').style.display = 'none';
+    const errEl = document.getElementById('error');
+    errEl.textContent = 'Kunne ikke laste prediksjoner: ' + err.message;
+    errEl.style.display = 'block';
+  }
+}
+
+load();
+</script>
+</body>
+</html>

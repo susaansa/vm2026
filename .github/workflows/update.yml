@@ -1,0 +1,34 @@
+name: Oppdater prediksjoner
+
+on:
+  schedule:
+    - cron: "0 7 * * *"   # 07:00 UTC = 09:00 Oslo; fanger alle resultater fra natten
+  workflow_dispatch:        # Manuell trigger fra GitHub-UI
+
+permissions:
+  contents: write           # Påkrevd for å committe data.json + historikk tilbake til repoet
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Sjekk ut kode
+        uses: actions/checkout@v4
+
+      - name: Sett opp Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer avhengigheter
+        run: pip install -r requirements.txt
+
+      - name: Kjør prediksjonssystem
+        run: python -m src.main
+
+      - name: Commit oppdaterte filer
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: oppdater prediksjoner"
+          file_pattern: "docs/data.json data/history/*.json"
