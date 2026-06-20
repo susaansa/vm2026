@@ -107,6 +107,7 @@ def predict_matches(upcoming: list[dict], model: dict, played: list[dict] | None
         results.append(
             {
                 "date": m["date"].isoformat(),
+                "kickoff_utc": m.get("kickoff_utc"),
                 "team1": m["team1"],
                 "team2": m["team2"],
                 "group": m.get("group", ""),

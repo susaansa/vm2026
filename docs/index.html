@@ -287,6 +287,17 @@ function renderDate(isoDate) {
   return d.toLocaleDateString('no-NO', { weekday: 'long', day: 'numeric', month: 'long' });
 }
 
+function renderDateShort(isoDate) {
+  const d = new Date(isoDate + 'T12:00:00');
+  return d.toLocaleDateString('no-NO', { day: 'numeric', month: 'short' });
+}
+
+function norskTid(utcStr) {
+  if (!utcStr) return null;
+  const d = new Date(utcStr);
+  return d.toLocaleTimeString('no-NO', { timeZone: 'Europe/Oslo', hour: '2-digit', minute: '2-digit' });
+}
+
 function renderMatches(upcoming) {
   const tbody = document.getElementById('matches-body');
   if (!upcoming.length) {
@@ -319,8 +330,11 @@ function renderMatches(upcoming) {
 
     const helpBtn = `<button class="help-btn" data-idx="${sorted.indexOf(m)}" aria-label="Forklaring">?</button>`;
 
+    const tid = norskTid(m.kickoff_utc);
+    const tidHtml = tid ? `<div style="font-size:0.72rem;color:#888;margin-bottom:2px">${tid}</div>` : '';
+
     row.innerHTML = `
-      <td><span class="team">${lag(m.team1)}</span><span class="vs">–</span><span class="team">${lag(m.team2)}</span></td>
+      <td>${tidHtml}<span class="team">${lag(m.team1)}</span><span class="vs">–</span><span class="team">${lag(m.team2)}</span></td>
       <td>${gruppe(m.group)}</td>
       <td>
         <span class="score-pill">${tipScore}</span>${helpBtn}
@@ -408,8 +422,11 @@ function openModal(m) {
   const formLine = (teamName, form) => {
     if (!form || !form.length)
       return `<b>${teamName}</b>: ingen kamper spilt ennå – prediksjon basert på FIFA-rangering.`;
-    const res = form.map(r => `${r.f}–${r.m} mot ${lag(r.opp)}`).join(', ');
-    return `<b>${teamName}</b>: ${res}`;
+    const rows = form.map(r => {
+      const dato = r.date ? renderDateShort(r.date) : '';
+      return `<span style="color:#888;min-width:4.5rem;display:inline-block">${dato}</span>${r.f}–${r.m} mot ${lag(r.opp)}`;
+    }).join('<br>');
+    return `<b>${teamName}</b>:<br>${rows}`;
   };
 
   lines.push(formLine(t1, ctx.team1_form));
