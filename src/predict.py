@@ -1,5 +1,6 @@
 """Generate match predictions from a fitted model."""
 import math
+from datetime import date
 
 from src.model import _dc_tau, strength_for
 
@@ -82,10 +83,27 @@ def predict_match(team1: str, team2: str, model: dict) -> dict:
     }
 
 
-def predict_matches(upcoming: list[dict], model: dict) -> list[dict]:
+def _team_form(team: str, played: list[dict]) -> list[dict]:
+    """Return all tournament matches played by this team, as {opp, f, m, date}."""
+    results = []
+    for m in played:
+        if m["team1"] == team:
+            results.append({"opp": m["team2"], "f": m["score"][0], "m": m["score"][1], "date": m["date"].isoformat()})
+        elif m["team2"] == team:
+            results.append({"opp": m["team1"], "f": m["score"][1], "m": m["score"][0], "date": m["date"].isoformat()})
+    return results
+
+
+def predict_matches(upcoming: list[dict], model: dict, played: list[dict] | None = None) -> list[dict]:
     results = []
     for m in upcoming:
         pred = predict_match(m["team1"], m["team2"], model)
+        context = {}
+        if played is not None:
+            context = {
+                "team1_form": _team_form(m["team1"], played),
+                "team2_form": _team_form(m["team2"], played),
+            }
         results.append(
             {
                 "date": m["date"].isoformat(),
@@ -93,6 +111,7 @@ def predict_matches(upcoming: list[dict], model: dict) -> list[dict]:
                 "team2": m["team2"],
                 "group": m.get("group", ""),
                 **pred,
+                "context": context,
             }
         )
     return results

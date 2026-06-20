@@ -107,6 +107,72 @@
   .error { color: #c0392b; }
 
   footer { font-size: 0.75rem; color: #aaa; text-align: center; margin-top: 2rem; }
+
+  .help-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #ddd;
+    color: #555;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-left: 5px;
+    flex-shrink: 0;
+  }
+  .help-btn:hover { background: #bbb; }
+
+  .modal-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .modal-backdrop.open { display: flex; }
+
+  .modal-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    max-width: 480px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    position: relative;
+  }
+  .modal-title {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #1a1a2e;
+    margin-bottom: 0.9rem;
+    padding-right: 1.5rem;
+  }
+  .modal-close {
+    position: absolute;
+    top: 0.9rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #888;
+    line-height: 1;
+  }
+  .modal-close:hover { color: #333; }
+  .modal-body { font-size: 0.875rem; color: #333; line-height: 1.6; }
+  .modal-body p { margin-bottom: 0.5rem; }
+  .modal-body p:last-child { margin-bottom: 0; }
+  .modal-section { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #eee; }
+  .modal-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: #888; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
+  .tip-highlight { color: #c0392b; font-weight: 700; }
 </style>
 </head>
 <body>
@@ -115,6 +181,14 @@
     <h1>VM 2026 Prediksjoner</h1>
     <p id="generated-ts">Laster...</p>
   </header>
+
+  <div id="modal-backdrop" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close" aria-label="Lukk">&times;</button>
+      <div class="modal-title" id="modal-title"></div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
 
   <div id="loading" class="status">Henter prediksjoner...</div>
   <div id="error" class="status error" style="display:none"></div>
@@ -222,6 +296,7 @@ function renderMatches(upcoming) {
 
   // Sort client-side by date as a safety net
   const sorted = [...upcoming].sort((a, b) => a.date.localeCompare(b.date));
+  _sortedMatches = sorted;
 
   let lastDate = null;
   sorted.forEach((m) => {
@@ -237,16 +312,18 @@ function renderMatches(upcoming) {
 
     const barW = (p) => `width:${(p * 100).toFixed(1)}%`;
 
-    const tipScore = m.tip_score || m.best_score || '–';
+    const tipScore = m.tip_score || m.mode_score || m.best_score || '–';
     const top3Html = (m.top3 || [])
       .map(s => `${s.score}&nbsp;<span style="color:#999">${s.pct}%</span>`)
       .join('&ensp;');
+
+    const helpBtn = `<button class="help-btn" data-idx="${sorted.indexOf(m)}" aria-label="Forklaring">?</button>`;
 
     row.innerHTML = `
       <td><span class="team">${lag(m.team1)}</span><span class="vs">–</span><span class="team">${lag(m.team2)}</span></td>
       <td>${gruppe(m.group)}</td>
       <td>
-        <span class="score-pill">${tipScore}</span>
+        <span class="score-pill">${tipScore}</span>${helpBtn}
         <div style="font-size:0.72rem;color:#777;margin-top:4px">${top3Html}</div>
       </td>
       <td class="prob-cell">
@@ -294,6 +371,83 @@ function renderMetrics(metrics) {
     </div>
   `;
 }
+
+// ── Modal ────────────────────────────────────────────────────────────────────
+
+let _sortedMatches = [];
+
+function openModal(m) {
+  const t1 = lag(m.team1), t2 = lag(m.team2);
+  const tip = m.tip_score || m.mode_score || '–';
+  const mode = m.mode_score || tip;
+
+  document.getElementById('modal-title').textContent = `${t1} – ${t2}`;
+
+  const lines = [];
+
+  // 1. Sannsynligheter og favoritt
+  const maxP = Math.max(m.ph, m.pu, m.pb);
+  if (m.ph === maxP) {
+    lines.push(`<b>${t1}</b> er favoritt med <span class="tip-highlight">${pct(m.ph)}</span> vinnsjanse, mot ${pct(m.pu)} uavgjort og ${pct(m.pb)} ${t2}-seier.`);
+  } else if (m.pu === maxP) {
+    lines.push(`<b>Uavgjort</b> er mest sannsynlig utfall: <span class="tip-highlight">${pct(m.pu)}</span>, foran ${t1}-seier (${pct(m.ph)}) og ${t2}-seier (${pct(m.pb)}).`);
+  } else {
+    lines.push(`<b>${t2}</b> er favoritt med <span class="tip-highlight">${pct(m.pb)}</span> vinnsjanse, mot ${pct(m.pu)} uavgjort og ${pct(m.ph)} ${t1}-seier.`);
+  }
+
+  // 2. Forklaring av tipsforslag vs. statistisk modus
+  if (tip !== mode) {
+    lines.push(`Tipsforslaget <b>${tip}</b> er det mest sannsynlige skåret innen favorittutfallet. Den rene statistiske modus er <b>${mode}</b> – men det er et annet utfall enn favorittens.`);
+  } else {
+    lines.push(`<b>${tip}</b> er både tipsforslaget og det statistisk mest sannsynlige enkeltskåret.`);
+  }
+
+  // 3. Lagenes resultater i turneringen
+  const ctx = m.context || {};
+
+  const formLine = (teamName, form) => {
+    if (!form || !form.length)
+      return `<b>${teamName}</b>: ingen kamper spilt ennå – prediksjon basert på FIFA-rangering.`;
+    const res = form.map(r => `${r.f}–${r.m} mot ${lag(r.opp)}`).join(', ');
+    return `<b>${teamName}</b>: ${res}`;
+  };
+
+  lines.push(formLine(t1, ctx.team1_form));
+  lines.push(formLine(t2, ctx.team2_form));
+
+  // 4. Topp 3 skår
+  if (m.top3 && m.top3.length) {
+    const top3str = m.top3.map(s => `${s.score} (${s.pct}%)`).join(', ');
+    lines.push(`Topp 3 mest sannsynlige enkeltskår: ${top3str}.`);
+  }
+
+  document.getElementById('modal-body').innerHTML =
+    lines.map(l => `<p>${l}</p>`).join('');
+
+  document.getElementById('modal-backdrop').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('modal-backdrop').classList.remove('open');
+}
+
+document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('modal-backdrop').addEventListener('click', (e) => {
+  if (e.target === e.currentTarget) closeModal();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal();
+});
+
+// Delegated click on all "?" buttons (rendered after fetch)
+document.getElementById('matches-body').addEventListener('click', (e) => {
+  const btn = e.target.closest('.help-btn');
+  if (!btn) return;
+  const idx = parseInt(btn.dataset.idx, 10);
+  if (_sortedMatches[idx]) openModal(_sortedMatches[idx]);
+});
+
+// ── Data loading ─────────────────────────────────────────────────────────────
 
 async function load() {
   try {
