@@ -152,12 +152,65 @@
 </footer>
 
 <script>
+const LAGNAVN = {
+  "Algeria": "Algerie",
+  "Argentina": "Argentina",
+  "Australia": "Australia",
+  "Austria": "Østerrike",
+  "Belgium": "Belgia",
+  "Bosnia & Herzegovina": "Bosnia-Hercegovina",
+  "Brazil": "Brasil",
+  "Canada": "Canada",
+  "Cape Verde": "Kapp Verde",
+  "Colombia": "Colombia",
+  "Croatia": "Kroatia",
+  "Curaçao": "Curaçao",
+  "Czech Republic": "Tsjekkia",
+  "DR Congo": "DR Kongo",
+  "Ecuador": "Ecuador",
+  "Egypt": "Egypt",
+  "England": "England",
+  "France": "Frankrike",
+  "Germany": "Tyskland",
+  "Ghana": "Ghana",
+  "Haiti": "Haiti",
+  "Iran": "Iran",
+  "Iraq": "Irak",
+  "Ivory Coast": "Elfenbenskysten",
+  "Japan": "Japan",
+  "Jordan": "Jordan",
+  "Mexico": "Mexico",
+  "Morocco": "Marokko",
+  "Netherlands": "Nederland",
+  "New Zealand": "New Zealand",
+  "Norway": "Norge",
+  "Panama": "Panama",
+  "Paraguay": "Paraguay",
+  "Portugal": "Portugal",
+  "Qatar": "Qatar",
+  "Saudi Arabia": "Saudi-Arabia",
+  "Scotland": "Skottland",
+  "Senegal": "Senegal",
+  "South Africa": "Sør-Afrika",
+  "South Korea": "Sør-Korea",
+  "Spain": "Spania",
+  "Sweden": "Sverige",
+  "Switzerland": "Sveits",
+  "Tunisia": "Tunisia",
+  "Turkey": "Tyrkia",
+  "Uruguay": "Uruguay",
+  "USA": "USA",
+  "Uzbekistan": "Usbekistan",
+};
+
+const lag = (name) => LAGNAVN[name] || name;
+const gruppe = (g) => g ? g.replace('Group', 'Gruppe') : '–';
 const pct = (v) => (v * 100).toFixed(1) + '%';
 const fmt2 = (v) => v != null ? v.toFixed(2) : '–';
 
 function renderDate(isoDate) {
   const d = new Date(isoDate + 'T12:00:00');
-  return d.toLocaleDateString('no-NO', { weekday: 'short', day: 'numeric', month: 'short' });
+  return d.toLocaleDateString('no-NO', { weekday: 'long', day: 'numeric', month: 'long' });
 }
 
 function renderMatches(upcoming) {
@@ -167,8 +220,11 @@ function renderMatches(upcoming) {
     return;
   }
 
+  // Sort client-side by date as a safety net
+  const sorted = [...upcoming].sort((a, b) => a.date.localeCompare(b.date));
+
   let lastDate = null;
-  upcoming.forEach((m) => {
+  sorted.forEach((m) => {
     if (m.date !== lastDate) {
       lastDate = m.date;
       const dr = document.createElement('tr');
@@ -181,8 +237,8 @@ function renderMatches(upcoming) {
 
     const barW = (p) => `width:${(p * 100).toFixed(1)}%`;
     row.innerHTML = `
-      <td><span class="team">${m.team1}</span><span class="vs">–</span><span class="team">${m.team2}</span></td>
-      <td>${m.group || '–'}</td>
+      <td><span class="team">${lag(m.team1)}</span><span class="vs">–</span><span class="team">${lag(m.team2)}</span></td>
+      <td>${gruppe(m.group)}</td>
       <td><span class="score-pill">${m.best_score}</span></td>
       <td class="prob-cell">
         ${pct(m.ph)}&nbsp; ${pct(m.pu)}&nbsp; ${pct(m.pb)}
