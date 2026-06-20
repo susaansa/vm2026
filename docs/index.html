@@ -198,19 +198,20 @@
   </header>
 
   <div class="abstract">
-    Prediksjonsmodellen benytter bivariat Poisson-regresjon med Dixon–Coles-korreksjon for
-    kovarians mellom lavskårsutfall. Angrepsstyrke <em>a<sub>i</sub></em> og
-    forsvarsstyrke <em>d<sub>i</sub></em> per lag samt korrelasjonsparameter <em>ρ</em>
-    estimeres ved maximum likelihood-optimalisering (L-BFGS-B) på samtlige spilte
-    VM 2026-kamper, vektet med eksponentiell tidsforfall (<em>δ</em>&nbsp;=&nbsp;0,005&nbsp;d⁻¹).
-    FIFAs verdensrangering (juni 2026) inngår som apriori gjennom L2-regularisering,
-    slik at estimatene er robuste ved få observasjoner.
-    Kampresultater beregnes over et 7&nbsp;×&nbsp;7 skårgrid; sannsynligheter for seier,
-    uavgjort og tap utledes som marginalsummer, og «fair odds» rapporteres som 1/<em>P</em>.
+    Modellen antar at mål inntreffer uavhengig av hverandre med en rate som avhenger av
+    hvert lags relative angrepsstyrke og forsvarsstyrke – det vil si at antall mål per kamp
+    følger en Poisson-fordeling. Styrkeparametrene estimeres fra spilte VM 2026-kamper,
+    der nyere resultater teller mer enn eldre. Ettersom Poisson-modellen alene
+    undervurderer frekvensen av lavskårsresultater (0–0, 1–0 o.l.), korrigeres dette
+    med en justering kjent som Dixon–Coles-korreksjon. FIFAs verdensrangering brukes
+    som utgangspunkt, slik at modellen gir fornuftige prediksjoner allerede fra
+    første spilte kamp og ikke er avhengig av mye data for å fungere.
+    Sannsynligheter for seier, uavgjort og tap beregnes, og «fair odds» (1/sannsynlighet)
+    rapporteres til sammenligning med hva bettingselskaper tilbyr.
     Tipsforslaget er det mest sannsynlige eksaktskåret innenfor det mest sannsynlige
-    utfallet (H/U/B), ikke det statistiske moduset over hele fordelingen.
-    Prediktiv treffsikkerhet evalueres med Brier score, log-loss og treffrater for
-    eksaktskår og utfall, og oppdateres automatisk etter hvert spilte kamp.
+    utfallet – ikke nødvendigvis det enkeltresultatet med høyest sannsynlighet,
+    siden dette ofte er misvisende når ett lag er klar favoritt.
+    Modellens treffsikkerhet oppdateres automatisk etter hvert kamp.
     <span id="abstract-metrics">Ingen evaluerte kamper ennå.</span>
     <div class="byline">Vibekodet med Claude Code av Susanne Sandell.</div>
   </div>
