@@ -49,7 +49,25 @@ def predict_match(team1: str, team2: str, model: dict) -> dict:
     if total > 0:
         ph, pu, pb = ph / total, pu / total, pb / total
 
+    # Statistical mode — most likely single score (often misleading for tipping)
     best_g1, best_g2 = max(probs, key=probs.__getitem__)
+
+    # Tipping recommendation — best score within the most likely outcome.
+    # Filters to only H/U/B cells matching the winning outcome before taking max.
+    if ph >= pu and ph >= pb:
+        outcome_scores = {s: p for s, p in probs.items() if s[0] > s[1]}
+    elif pu >= ph and pu >= pb:
+        outcome_scores = {s: p for s, p in probs.items() if s[0] == s[1]}
+    else:
+        outcome_scores = {s: p for s, p in probs.items() if s[0] < s[1]}
+    tip_g1, tip_g2 = max(outcome_scores, key=outcome_scores.__getitem__)
+
+    # Top 3 most likely exact scores with individual probabilities
+    top3 = sorted(probs.items(), key=lambda x: -x[1])[:3]
+    top3_list = [
+        {"score": f"{g1}-{g2}", "pct": round(p * 100, 1)}
+        for (g1, g2), p in top3
+    ]
 
     return {
         "ph": round(ph, 4),
@@ -58,7 +76,9 @@ def predict_match(team1: str, team2: str, model: dict) -> dict:
         "odds_h": round(1.0 / ph, 2) if ph > 0 else None,
         "odds_u": round(1.0 / pu, 2) if pu > 0 else None,
         "odds_b": round(1.0 / pb, 2) if pb > 0 else None,
-        "best_score": f"{best_g1}-{best_g2}",
+        "mode_score": f"{best_g1}-{best_g2}",
+        "tip_score": f"{tip_g1}-{tip_g2}",
+        "top3": top3_list,
     }
 
 

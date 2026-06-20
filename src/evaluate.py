@@ -57,7 +57,8 @@ def evaluate(played: list[dict], history_dir: Path) -> dict | None:
         if p_actual > 0:
             log_losses.append(-math.log(p_actual))
 
-        predicted_score = pred.get("best_score", "")
+        # Use tip_score (outcome-backed tip) for exact score evaluation
+        predicted_score = pred.get("tip_score") or pred.get("best_score", "")
         actual_score = f"{g1}-{g2}"
         exact_hits.append(1 if predicted_score == actual_score else 0)
 

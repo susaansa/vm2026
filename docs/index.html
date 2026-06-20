@@ -128,7 +128,7 @@
             <tr>
               <th>Kamp</th>
               <th>Gruppe</th>
-              <th>Beste skår</th>
+              <th>Tipsforslag</th>
               <th>H&nbsp;&nbsp;&nbsp;U&nbsp;&nbsp;&nbsp;B</th>
               <th>Fair odds</th>
             </tr>
@@ -236,10 +236,19 @@ function renderMatches(upcoming) {
     const row = document.createElement('tr');
 
     const barW = (p) => `width:${(p * 100).toFixed(1)}%`;
+
+    const tipScore = m.tip_score || m.best_score || '–';
+    const top3Html = (m.top3 || [])
+      .map(s => `${s.score}&nbsp;<span style="color:#999">${s.pct}%</span>`)
+      .join('&ensp;');
+
     row.innerHTML = `
       <td><span class="team">${lag(m.team1)}</span><span class="vs">–</span><span class="team">${lag(m.team2)}</span></td>
       <td>${gruppe(m.group)}</td>
-      <td><span class="score-pill">${m.best_score}</span></td>
+      <td>
+        <span class="score-pill">${tipScore}</span>
+        <div style="font-size:0.72rem;color:#777;margin-top:4px">${top3Html}</div>
+      </td>
       <td class="prob-cell">
         ${pct(m.ph)}&nbsp; ${pct(m.pu)}&nbsp; ${pct(m.pb)}
         <div class="prob-bar">
