@@ -176,11 +176,30 @@
   .abstract {
     background: #f7f7f5;
     border-left: 3px solid #4b6cb7;
-    padding: 0.9rem 1.1rem;
+    padding: 0.5rem 1.1rem;
     margin: 1.1rem 0 0;
     font-size: 0.8rem;
     line-height: 1.7;
     color: #444;
+  }
+  .abstract summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #4b6cb7;
+    padding: 0.35rem 0;
+    list-style: none;
+    user-select: none;
+  }
+  .abstract summary::after {
+    content: ' ▸';
+    font-size: 0.7rem;
+  }
+  .abstract[open] summary::after {
+    content: ' ▾';
+  }
+  .abstract[open] summary {
+    margin-bottom: 0.5rem;
   }
   .abstract .byline {
     margin-top: 0.65rem;
@@ -197,7 +216,8 @@
     <p id="generated-ts">Laster...</p>
   </header>
 
-  <div class="abstract">
+  <details class="abstract">
+    <summary>Om metoden</summary>
     Modellen antar at mål inntreffer uavhengig av hverandre med en rate som avhenger av
     hvert lags relative angrepsstyrke og forsvarsstyrke – det vil si at antall mål per kamp
     følger en Poisson-fordeling. Styrkeparametrene estimeres fra spilte VM 2026-kamper,
@@ -214,7 +234,7 @@
     Modellens treffsikkerhet oppdateres automatisk etter hvert kamp.
     <span id="abstract-metrics">Ingen evaluerte kamper ennå.</span>
     <div class="byline">Vibekodet med Claude Code av Susanne Sandell.</div>
-  </div>
+  </details>
 
   <div id="modal-backdrop" class="modal-backdrop" role="dialog" aria-modal="true">
     <div class="modal-card">
