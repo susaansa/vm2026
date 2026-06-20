@@ -52,6 +52,7 @@ def main() -> None:
         print("Advarsel: optimalisering konvergerte ikke fullt ut.", file=sys.stderr)
 
     predictions = predict_matches(upcoming, model)
+    predictions.sort(key=lambda m: (m["date"], m["group"], m["team1"]))
     print(f"Prediksjon generert for {len(predictions)} kommende kamper.")
 
     today = date.today()
