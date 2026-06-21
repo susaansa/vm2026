@@ -1,6 +1,6 @@
 {
-  "generated": "2026-06-21T10:26:16Z",
-  "upcoming": [
+  "date": "2026-06-21",
+  "predictions": [
     {
       "date": "2026-06-21",
       "kickoff_utc": "2026-06-21T19:00Z",
@@ -1837,7 +1837,5 @@
         ]
       }
     }
-  ],
-  "metrics": null,
-  "model_params_n_matches": 36
+  ]
 }
