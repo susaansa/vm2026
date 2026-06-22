@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-22T00:04:07Z",
+  "generated": "2026-06-22T12:44:31Z",
   "upcoming": [
     {
       "date": "2026-06-22",
@@ -291,7 +291,7 @@
       "group": "Group L",
       "ph": 0.3176,
       "pu": 0.3963,
-      "pb": 0.2861,
+      "pb": 0.286,
       "odds_h": 3.15,
       "odds_u": 2.52,
       "odds_b": 3.5,
@@ -799,7 +799,7 @@
       "ph": 0.0045,
       "pu": 0.0695,
       "pb": 0.926,
-      "odds_h": 222.55,
+      "odds_h": 222.57,
       "odds_u": 14.38,
       "odds_b": 1.08,
       "mode_score": "0-3",
@@ -857,7 +857,7 @@
       "group": "Group E",
       "ph": 0.0426,
       "pu": 0.2927,
-      "pb": 0.6647,
+      "pb": 0.6646,
       "odds_h": 23.45,
       "odds_u": 3.42,
       "odds_b": 1.5,
@@ -917,7 +917,7 @@
       "ph": 0.0229,
       "pu": 0.1719,
       "pb": 0.8052,
-      "odds_h": 43.66,
+      "odds_h": 43.67,
       "odds_u": 5.82,
       "odds_b": 1.24,
       "mode_score": "0-2",
@@ -1091,26 +1091,26 @@
       "team1": "Egypt",
       "team2": "Iran",
       "group": "Group G",
-      "ph": 0.2993,
-      "pu": 0.4203,
-      "pb": 0.2805,
-      "odds_h": 3.34,
-      "odds_u": 2.38,
-      "odds_b": 3.57,
+      "ph": 0.4475,
+      "pu": 0.389,
+      "pb": 0.1635,
+      "odds_h": 2.23,
+      "odds_u": 2.57,
+      "odds_b": 6.12,
       "mode_score": "1-1",
-      "tip_score": "1-1",
+      "tip_score": "2-0",
       "top3": [
         {
           "score": "1-1",
-          "pct": 20.0
+          "pct": 18.5
         },
         {
           "score": "0-0",
-          "pct": 17.1
+          "pct": 15.8
         },
         {
-          "score": "2-1",
-          "pct": 7.6
+          "score": "2-0",
+          "pct": 10.3
         }
       ],
       "context": {
@@ -1120,6 +1120,12 @@
             "f": 1,
             "m": 1,
             "date": "2026-06-15"
+          },
+          {
+            "opp": "New Zealand",
+            "f": 3,
+            "m": 1,
+            "date": "2026-06-21"
           }
         ],
         "team2_form": [
@@ -1144,26 +1150,26 @@
       "team1": "New Zealand",
       "team2": "Belgium",
       "group": "Group G",
-      "ph": 0.2571,
-      "pu": 0.4123,
-      "pb": 0.3306,
-      "odds_h": 3.89,
-      "odds_u": 2.43,
-      "odds_b": 3.02,
+      "ph": 0.1625,
+      "pu": 0.3814,
+      "pb": 0.4561,
+      "odds_h": 6.15,
+      "odds_u": 2.62,
+      "odds_b": 2.19,
       "mode_score": "1-1",
-      "tip_score": "1-1",
+      "tip_score": "0-2",
       "top3": [
         {
           "score": "1-1",
-          "pct": 19.7
+          "pct": 18.3
         },
         {
           "score": "0-0",
-          "pct": 16.3
+          "pct": 15.0
         },
         {
-          "score": "1-2",
-          "pct": 8.2
+          "score": "0-2",
+          "pct": 10.3
         }
       ],
       "context": {
@@ -1173,6 +1179,12 @@
             "f": 2,
             "m": 2,
             "date": "2026-06-15"
+          },
+          {
+            "opp": "Egypt",
+            "f": 1,
+            "m": 3,
+            "date": "2026-06-21"
           }
         ],
         "team2_form": [
@@ -1197,26 +1209,26 @@
       "team1": "Cape Verde",
       "team2": "Saudi Arabia",
       "group": "Group H",
-      "ph": 0.5533,
-      "pu": 0.385,
-      "pb": 0.0617,
-      "odds_h": 1.81,
-      "odds_u": 2.6,
-      "odds_b": 16.21,
+      "ph": 0.5877,
+      "pu": 0.3387,
+      "pb": 0.0735,
+      "odds_h": 1.7,
+      "odds_u": 2.95,
+      "odds_b": 13.6,
       "mode_score": "0-0",
-      "tip_score": "1-0",
+      "tip_score": "2-0",
       "top3": [
         {
           "score": "0-0",
-          "pct": 23.6
+          "pct": 15.9
         },
         {
-          "score": "1-0",
-          "pct": 19.9
+          "score": "1-1",
+          "pct": 15.3
         },
         {
           "score": "2-0",
-          "pct": 15.7
+          "pct": 14.8
         }
       ],
       "context": {
@@ -1226,6 +1238,12 @@
             "f": 0,
             "m": 0,
             "date": "2026-06-15"
+          },
+          {
+            "opp": "Uruguay",
+            "f": 2,
+            "m": 2,
+            "date": "2026-06-21"
           }
         ],
         "team2_form": [
@@ -1250,26 +1268,26 @@
       "team1": "Uruguay",
       "team2": "Spain",
       "group": "Group H",
-      "ph": 0.0306,
-      "pu": 0.2553,
-      "pb": 0.714,
-      "odds_h": 32.66,
-      "odds_u": 3.92,
-      "odds_b": 1.4,
+      "ph": 0.0487,
+      "pu": 0.2116,
+      "pb": 0.7397,
+      "odds_h": 20.55,
+      "odds_u": 4.73,
+      "odds_b": 1.35,
       "mode_score": "0-2",
       "tip_score": "0-2",
       "top3": [
         {
           "score": "0-2",
-          "pct": 17.7
+          "pct": 13.1
         },
         {
-          "score": "0-1",
-          "pct": 13.8
+          "score": "0-3",
+          "pct": 11.2
         },
         {
-          "score": "0-0",
-          "pct": 12.5
+          "score": "1-1",
+          "pct": 10.2
         }
       ],
       "context": {
@@ -1279,6 +1297,12 @@
             "f": 1,
             "m": 1,
             "date": "2026-06-15"
+          },
+          {
+            "opp": "Cape Verde",
+            "f": 2,
+            "m": 2,
+            "date": "2026-06-21"
           }
         ],
         "team2_form": [
@@ -1634,7 +1658,7 @@
       "group": "Group L",
       "ph": 0.0659,
       "pu": 0.2653,
-      "pb": 0.6689,
+      "pb": 0.6688,
       "odds_h": 15.18,
       "odds_u": 3.77,
       "odds_b": 1.5,
@@ -1675,11 +1699,11 @@
     }
   ],
   "metrics": {
-    "n_evaluated": 2,
-    "brier_score": 0.2315,
-    "log_loss": 1.1113,
+    "n_evaluated": 4,
+    "brier_score": 0.2021,
+    "log_loss": 0.9983,
     "exact_hit_rate": 0.0,
-    "outcome_hit_rate": 0.0
+    "outcome_hit_rate": 0.25
   },
-  "model_params_n_matches": 38
+  "model_params_n_matches": 40
 }
