@@ -7,26 +7,26 @@
       "team1": "Colombia",
       "team2": "DR Congo",
       "group": "Group K",
-      "ph": 0.4618,
-      "pu": 0.3647,
-      "pb": 0.1735,
-      "odds_h": 2.17,
-      "odds_u": 2.74,
-      "odds_b": 5.76,
+      "ph": 0.1897,
+      "pu": 0.4025,
+      "pb": 0.4078,
+      "odds_h": 5.27,
+      "odds_u": 2.48,
+      "odds_b": 2.45,
       "mode_score": "1-1",
-      "tip_score": "2-1",
+      "tip_score": "0-2",
       "top3": [
         {
           "score": "1-1",
-          "pct": 17.6
+          "pct": 19.2
         },
         {
           "score": "0-0",
-          "pct": 13.1
+          "pct": 16.4
         },
         {
-          "score": "2-1",
-          "pct": 9.6
+          "score": "0-2",
+          "pct": 9.5
         }
       ],
       "context": {
@@ -50,124 +50,30 @@
     },
     {
       "date": "2026-06-23",
-      "kickoff_utc": "2026-06-23T17:00Z",
-      "team1": "Portugal",
-      "team2": "Uzbekistan",
-      "group": "Group K",
-      "ph": 0.4954,
-      "pu": 0.3498,
-      "pb": 0.1548,
-      "odds_h": 2.02,
-      "odds_u": 2.86,
-      "odds_b": 6.46,
-      "mode_score": "1-1",
-      "tip_score": "2-0",
-      "top3": [
-        {
-          "score": "1-1",
-          "pct": 16.9
-        },
-        {
-          "score": "0-0",
-          "pct": 12.3
-        },
-        {
-          "score": "2-0",
-          "pct": 10.0
-        }
-      ],
-      "context": {
-        "team1_form": [
-          {
-            "opp": "DR Congo",
-            "f": 1,
-            "m": 1,
-            "date": "2026-06-17"
-          }
-        ],
-        "team2_form": [
-          {
-            "opp": "Colombia",
-            "f": 1,
-            "m": 3,
-            "date": "2026-06-17"
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-06-23",
-      "kickoff_utc": "2026-06-23T20:00Z",
-      "team1": "England",
-      "team2": "Ghana",
-      "group": "Group L",
-      "ph": 0.318,
-      "pu": 0.3962,
-      "pb": 0.2857,
-      "odds_h": 3.14,
-      "odds_u": 2.52,
-      "odds_b": 3.5,
-      "mode_score": "1-1",
-      "tip_score": "1-1",
-      "top3": [
-        {
-          "score": "1-1",
-          "pct": 19.1
-        },
-        {
-          "score": "0-0",
-          "pct": 14.4
-        },
-        {
-          "score": "2-1",
-          "pct": 8.3
-        }
-      ],
-      "context": {
-        "team1_form": [
-          {
-            "opp": "Croatia",
-            "f": 4,
-            "m": 2,
-            "date": "2026-06-17"
-          }
-        ],
-        "team2_form": [
-          {
-            "opp": "Panama",
-            "f": 1,
-            "m": 0,
-            "date": "2026-06-17"
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-06-23",
       "kickoff_utc": "2026-06-23T23:00Z",
       "team1": "Panama",
       "team2": "Croatia",
       "group": "Group L",
-      "ph": 0.1748,
-      "pu": 0.3929,
-      "pb": 0.4323,
-      "odds_h": 5.72,
-      "odds_u": 2.54,
-      "odds_b": 2.31,
+      "ph": 0.1911,
+      "pu": 0.3123,
+      "pb": 0.4966,
+      "odds_h": 5.23,
+      "odds_u": 3.2,
+      "odds_b": 2.01,
       "mode_score": "1-1",
-      "tip_score": "0-2",
+      "tip_score": "1-2",
       "top3": [
         {
           "score": "1-1",
-          "pct": 18.8
+          "pct": 14.4
+        },
+        {
+          "score": "1-2",
+          "pct": 9.7
         },
         {
           "score": "0-0",
-          "pct": 15.8
-        },
-        {
-          "score": "0-2",
-          "pct": 9.9
+          "pct": 8.6
         }
       ],
       "context": {
@@ -1021,7 +927,7 @@
       "team1": "Cape Verde",
       "team2": "Saudi Arabia",
       "group": "Group H",
-      "ph": 0.5874,
+      "ph": 0.5873,
       "pu": 0.3389,
       "pb": 0.0737,
       "odds_h": 1.7,
@@ -1375,26 +1281,26 @@
       "team1": "Colombia",
       "team2": "Portugal",
       "group": "Group K",
-      "ph": 0.4563,
-      "pu": 0.341,
-      "pb": 0.2028,
-      "odds_h": 2.19,
-      "odds_u": 2.93,
-      "odds_b": 4.93,
+      "ph": 0.104,
+      "pu": 0.2723,
+      "pb": 0.6237,
+      "odds_h": 9.62,
+      "odds_u": 3.67,
+      "odds_b": 1.6,
       "mode_score": "1-1",
-      "tip_score": "2-1",
+      "tip_score": "0-2",
       "top3": [
         {
           "score": "1-1",
-          "pct": 16.2
+          "pct": 13.0
         },
         {
-          "score": "0-0",
-          "pct": 10.4
+          "score": "0-2",
+          "pct": 10.5
         },
         {
-          "score": "2-1",
-          "pct": 9.7
+          "score": "1-2",
+          "pct": 9.8
         }
       ],
       "context": {
@@ -1412,6 +1318,12 @@
             "f": 1,
             "m": 1,
             "date": "2026-06-17"
+          },
+          {
+            "opp": "Uzbekistan",
+            "f": 5,
+            "m": 0,
+            "date": "2026-06-23"
           }
         ]
       }
@@ -1422,26 +1334,26 @@
       "team1": "DR Congo",
       "team2": "Uzbekistan",
       "group": "Group K",
-      "ph": 0.438,
-      "pu": 0.3925,
-      "pb": 0.1695,
-      "odds_h": 2.28,
-      "odds_u": 2.55,
-      "odds_b": 5.9,
-      "mode_score": "1-1",
+      "ph": 0.786,
+      "pu": 0.1864,
+      "pb": 0.0277,
+      "odds_h": 1.27,
+      "odds_u": 5.37,
+      "odds_b": 36.17,
+      "mode_score": "2-0",
       "tip_score": "2-0",
       "top3": [
         {
-          "score": "1-1",
-          "pct": 18.7
-        },
-        {
-          "score": "0-0",
-          "pct": 15.9
-        },
-        {
           "score": "2-0",
-          "pct": 10.1
+          "pct": 15.6
+        },
+        {
+          "score": "3-0",
+          "pct": 13.4
+        },
+        {
+          "score": "1-0",
+          "pct": 9.1
         }
       ],
       "context": {
@@ -1459,6 +1371,12 @@
             "f": 1,
             "m": 3,
             "date": "2026-06-17"
+          },
+          {
+            "opp": "Portugal",
+            "f": 0,
+            "m": 5,
+            "date": "2026-06-23"
           }
         ]
       }
@@ -1469,26 +1387,26 @@
       "team1": "Croatia",
       "team2": "Ghana",
       "group": "Group L",
-      "ph": 0.1418,
-      "pu": 0.3691,
-      "pb": 0.4891,
-      "odds_h": 7.05,
-      "odds_u": 2.71,
-      "odds_b": 2.04,
+      "ph": 0.1252,
+      "pu": 0.3913,
+      "pb": 0.4835,
+      "odds_h": 7.98,
+      "odds_u": 2.56,
+      "odds_b": 2.07,
       "mode_score": "1-1",
       "tip_score": "0-2",
       "top3": [
         {
           "score": "1-1",
-          "pct": 17.7
+          "pct": 17.9
         },
         {
           "score": "0-0",
-          "pct": 14.6
+          "pct": 17.9
         },
         {
           "score": "0-2",
-          "pct": 11.0
+          "pct": 12.1
         }
       ],
       "context": {
@@ -1506,6 +1424,12 @@
             "f": 1,
             "m": 0,
             "date": "2026-06-17"
+          },
+          {
+            "opp": "England",
+            "f": 0,
+            "m": 0,
+            "date": "2026-06-23"
           }
         ]
       }
@@ -1516,26 +1440,26 @@
       "team1": "Panama",
       "team2": "England",
       "group": "Group L",
-      "ph": 0.066,
-      "pu": 0.2654,
-      "pb": 0.6685,
-      "odds_h": 15.15,
-      "odds_u": 3.77,
-      "odds_b": 1.5,
+      "ph": 0.0585,
+      "pu": 0.294,
+      "pb": 0.6476,
+      "odds_h": 17.11,
+      "odds_u": 3.4,
+      "odds_b": 1.54,
       "mode_score": "0-2",
       "tip_score": "0-2",
       "top3": [
         {
           "score": "0-2",
-          "pct": 13.4
+          "pct": 15.1
         },
         {
           "score": "1-1",
-          "pct": 12.8
+          "pct": 13.8
         },
         {
           "score": "0-0",
-          "pct": 9.8
+          "pct": 12.7
         }
       ],
       "context": {
@@ -1553,6 +1477,12 @@
             "f": 4,
             "m": 2,
             "date": "2026-06-17"
+          },
+          {
+            "opp": "Ghana",
+            "f": 0,
+            "m": 0,
+            "date": "2026-06-23"
           }
         ]
       }
