@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-24T17:03:20Z",
+  "generated": "2026-06-24T23:59:39Z",
   "upcoming": [
     {
       "date": "2026-06-24",
@@ -121,124 +121,6 @@
     },
     {
       "date": "2026-06-24",
-      "kickoff_utc": "2026-06-24T19:00Z",
-      "team1": "Bosnia & Herzegovina",
-      "team2": "Qatar",
-      "group": "Group B",
-      "ph": 0.5362,
-      "pu": 0.3254,
-      "pb": 0.1384,
-      "odds_h": 1.86,
-      "odds_u": 3.07,
-      "odds_b": 7.22,
-      "mode_score": "1-1",
-      "tip_score": "2-0",
-      "top3": [
-        {
-          "score": "1-1",
-          "pct": 15.7
-        },
-        {
-          "score": "0-0",
-          "pct": 10.8
-        },
-        {
-          "score": "2-0",
-          "pct": 10.1
-        }
-      ],
-      "context": {
-        "team1_form": [
-          {
-            "opp": "Canada",
-            "f": 1,
-            "m": 1,
-            "date": "2026-06-12"
-          },
-          {
-            "opp": "Switzerland",
-            "f": 1,
-            "m": 4,
-            "date": "2026-06-18"
-          }
-        ],
-        "team2_form": [
-          {
-            "opp": "Switzerland",
-            "f": 1,
-            "m": 1,
-            "date": "2026-06-13"
-          },
-          {
-            "opp": "Canada",
-            "f": 0,
-            "m": 6,
-            "date": "2026-06-18"
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-06-24",
-      "kickoff_utc": "2026-06-24T19:00Z",
-      "team1": "Switzerland",
-      "team2": "Canada",
-      "group": "Group B",
-      "ph": 0.1434,
-      "pu": 0.2895,
-      "pb": 0.5671,
-      "odds_h": 6.97,
-      "odds_u": 3.45,
-      "odds_b": 1.76,
-      "mode_score": "1-1",
-      "tip_score": "1-2",
-      "top3": [
-        {
-          "score": "1-1",
-          "pct": 13.5
-        },
-        {
-          "score": "1-2",
-          "pct": 9.9
-        },
-        {
-          "score": "0-2",
-          "pct": 8.8
-        }
-      ],
-      "context": {
-        "team1_form": [
-          {
-            "opp": "Qatar",
-            "f": 1,
-            "m": 1,
-            "date": "2026-06-13"
-          },
-          {
-            "opp": "Bosnia & Herzegovina",
-            "f": 4,
-            "m": 1,
-            "date": "2026-06-18"
-          }
-        ],
-        "team2_form": [
-          {
-            "opp": "Bosnia & Herzegovina",
-            "f": 1,
-            "m": 1,
-            "date": "2026-06-12"
-          },
-          {
-            "opp": "Qatar",
-            "f": 6,
-            "m": 0,
-            "date": "2026-06-18"
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-06-24",
       "kickoff_utc": "2026-06-24T22:00Z",
       "team1": "Morocco",
       "team2": "Haiti",
@@ -248,7 +130,7 @@
       "pb": 0.0117,
       "odds_h": 1.31,
       "odds_u": 4.46,
-      "odds_b": 85.69,
+      "odds_b": 85.68,
       "mode_score": "2-0",
       "tip_score": "2-0",
       "top3": [
@@ -659,7 +541,7 @@
       "ph": 0.0046,
       "pu": 0.0244,
       "pb": 0.971,
-      "odds_h": 217.62,
+      "odds_h": 217.6,
       "odds_u": 40.94,
       "odds_b": 1.03,
       "mode_score": "0-6",
@@ -1419,11 +1301,11 @@
     }
   ],
   "metrics": {
-    "n_evaluated": 12,
-    "brier_score": 0.1601,
-    "log_loss": 0.8248,
-    "exact_hit_rate": 0.0833,
-    "outcome_hit_rate": 0.6667
+    "n_evaluated": 14,
+    "brier_score": 0.1725,
+    "log_loss": 0.8903,
+    "exact_hit_rate": 0.0714,
+    "outcome_hit_rate": 0.6429
   },
-  "model_params_n_matches": 48
+  "model_params_n_matches": 50
 }
