@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-25T10:12:16Z",
+  "generated": "2026-06-25T17:10:30Z",
   "upcoming": [
     {
       "date": "2026-06-25",
@@ -1059,6 +1059,77 @@
             "f": 0,
             "m": 0,
             "date": "2026-06-23"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-28",
+      "kickoff_utc": "2026-06-28T19:00Z",
+      "team1": "South Africa",
+      "team2": "Canada",
+      "group": "",
+      "ph": 0.1026,
+      "pu": 0.3713,
+      "pb": 0.5261,
+      "odds_h": 9.75,
+      "odds_u": 2.69,
+      "odds_b": 1.9,
+      "mode_score": "0-0",
+      "tip_score": "0-2",
+      "top3": [
+        {
+          "score": "0-0",
+          "pct": 17.0
+        },
+        {
+          "score": "1-1",
+          "pct": 17.0
+        },
+        {
+          "score": "0-2",
+          "pct": 13.2
+        }
+      ],
+      "context": {
+        "team1_form": [
+          {
+            "opp": "Mexico",
+            "f": 0,
+            "m": 2,
+            "date": "2026-06-11"
+          },
+          {
+            "opp": "Czech Republic",
+            "f": 1,
+            "m": 1,
+            "date": "2026-06-18"
+          },
+          {
+            "opp": "South Korea",
+            "f": 1,
+            "m": 0,
+            "date": "2026-06-24"
+          }
+        ],
+        "team2_form": [
+          {
+            "opp": "Bosnia & Herzegovina",
+            "f": 1,
+            "m": 1,
+            "date": "2026-06-12"
+          },
+          {
+            "opp": "Qatar",
+            "f": 6,
+            "m": 0,
+            "date": "2026-06-18"
+          },
+          {
+            "opp": "Switzerland",
+            "f": 1,
+            "m": 2,
+            "date": "2026-06-24"
           }
         ]
       }
