@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-26T10:15:57Z",
+  "generated": "2026-06-26T16:59:18Z",
   "upcoming": [
     {
       "date": "2026-06-26",
@@ -774,6 +774,148 @@
           {
             "opp": "Switzerland",
             "f": 1,
+            "m": 2,
+            "date": "2026-06-24"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-29",
+      "kickoff_utc": "2026-06-29T17:00Z",
+      "team1": "Brazil",
+      "team2": "Japan",
+      "group": "",
+      "ph": 0.4408,
+      "pu": 0.4053,
+      "pb": 0.1539,
+      "odds_h": 2.27,
+      "odds_u": 2.47,
+      "odds_b": 6.5,
+      "mode_score": "1-1",
+      "tip_score": "2-0",
+      "top3": [
+        {
+          "score": "1-1",
+          "pct": 18.8
+        },
+        {
+          "score": "0-0",
+          "pct": 18.0
+        },
+        {
+          "score": "2-0",
+          "pct": 10.8
+        }
+      ],
+      "context": {
+        "team1_form": [
+          {
+            "opp": "Morocco",
+            "f": 1,
+            "m": 1,
+            "date": "2026-06-13"
+          },
+          {
+            "opp": "Haiti",
+            "f": 3,
+            "m": 0,
+            "date": "2026-06-19"
+          },
+          {
+            "opp": "Scotland",
+            "f": 3,
+            "m": 0,
+            "date": "2026-06-24"
+          }
+        ],
+        "team2_form": [
+          {
+            "opp": "Netherlands",
+            "f": 2,
+            "m": 2,
+            "date": "2026-06-14"
+          },
+          {
+            "opp": "Tunisia",
+            "f": 4,
+            "m": 0,
+            "date": "2026-06-20"
+          },
+          {
+            "opp": "Sweden",
+            "f": 1,
+            "m": 1,
+            "date": "2026-06-25"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-29",
+      "kickoff_utc": "2026-06-30T01:00Z",
+      "team1": "Netherlands",
+      "team2": "Morocco",
+      "group": "",
+      "ph": 0.3882,
+      "pu": 0.2947,
+      "pb": 0.3172,
+      "odds_h": 2.58,
+      "odds_u": 3.39,
+      "odds_b": 3.15,
+      "mode_score": "1-1",
+      "tip_score": "2-1",
+      "top3": [
+        {
+          "score": "1-1",
+          "pct": 12.2
+        },
+        {
+          "score": "2-1",
+          "pct": 8.1
+        },
+        {
+          "score": "1-2",
+          "pct": 7.3
+        }
+      ],
+      "context": {
+        "team1_form": [
+          {
+            "opp": "Japan",
+            "f": 2,
+            "m": 2,
+            "date": "2026-06-14"
+          },
+          {
+            "opp": "Sweden",
+            "f": 5,
+            "m": 1,
+            "date": "2026-06-20"
+          },
+          {
+            "opp": "Tunisia",
+            "f": 3,
+            "m": 1,
+            "date": "2026-06-25"
+          }
+        ],
+        "team2_form": [
+          {
+            "opp": "Brazil",
+            "f": 1,
+            "m": 1,
+            "date": "2026-06-13"
+          },
+          {
+            "opp": "Scotland",
+            "f": 1,
+            "m": 0,
+            "date": "2026-06-19"
+          },
+          {
+            "opp": "Haiti",
+            "f": 4,
             "m": 2,
             "date": "2026-06-24"
           }
