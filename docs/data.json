@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-26T00:04:11Z",
+  "generated": "2026-06-26T10:15:57Z",
   "upcoming": [
     {
       "date": "2026-06-26",
@@ -187,7 +187,7 @@
       "ph": 0.0495,
       "pu": 0.2132,
       "pb": 0.7373,
-      "odds_h": 20.2,
+      "odds_h": 20.21,
       "odds_u": 4.69,
       "odds_b": 1.36,
       "mode_score": "0-2",
@@ -423,7 +423,7 @@
       "ph": 0.0059,
       "pu": 0.0519,
       "pb": 0.9422,
-      "odds_h": 170.92,
+      "odds_h": 170.91,
       "odds_u": 19.26,
       "odds_b": 1.06,
       "mode_score": "0-4",
@@ -782,11 +782,11 @@
     }
   ],
   "metrics": {
-    "n_evaluated": 20,
-    "brier_score": 0.1807,
-    "log_loss": 0.9935,
-    "exact_hit_rate": 0.1,
-    "outcome_hit_rate": 0.65
+    "n_evaluated": 24,
+    "brier_score": 0.1982,
+    "log_loss": 1.1517,
+    "exact_hit_rate": 0.125,
+    "outcome_hit_rate": 0.625
   },
-  "model_params_n_matches": 56
+  "model_params_n_matches": 60
 }
