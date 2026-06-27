@@ -69,7 +69,7 @@
       "ph": 0.0059,
       "pu": 0.0522,
       "pb": 0.9419,
-      "odds_h": 169.59,
+      "odds_h": 169.58,
       "odds_u": 19.17,
       "odds_b": 1.06,
       "mode_score": "0-4",
@@ -232,124 +232,6 @@
             "opp": "Portugal",
             "f": 0,
             "m": 5,
-            "date": "2026-06-23"
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-06-27",
-      "kickoff_utc": "2026-06-27T21:00Z",
-      "team1": "Croatia",
-      "team2": "Ghana",
-      "group": "Group L",
-      "ph": 0.1498,
-      "pu": 0.4561,
-      "pb": 0.3941,
-      "odds_h": 6.68,
-      "odds_u": 2.19,
-      "odds_b": 2.54,
-      "mode_score": "0-0",
-      "tip_score": "0-0",
-      "top3": [
-        {
-          "score": "0-0",
-          "pct": 25.3
-        },
-        {
-          "score": "1-1",
-          "pct": 18.2
-        },
-        {
-          "score": "0-1",
-          "pct": 14.0
-        }
-      ],
-      "context": {
-        "team1_form": [
-          {
-            "opp": "England",
-            "f": 2,
-            "m": 4,
-            "date": "2026-06-17"
-          },
-          {
-            "opp": "Panama",
-            "f": 1,
-            "m": 0,
-            "date": "2026-06-23"
-          }
-        ],
-        "team2_form": [
-          {
-            "opp": "Panama",
-            "f": 1,
-            "m": 0,
-            "date": "2026-06-17"
-          },
-          {
-            "opp": "England",
-            "f": 0,
-            "m": 0,
-            "date": "2026-06-23"
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-06-27",
-      "kickoff_utc": "2026-06-27T21:00Z",
-      "team1": "Panama",
-      "team2": "England",
-      "group": "Group L",
-      "ph": 0.0226,
-      "pu": 0.246,
-      "pb": 0.7314,
-      "odds_h": 44.15,
-      "odds_u": 4.07,
-      "odds_b": 1.37,
-      "mode_score": "0-2",
-      "tip_score": "0-2",
-      "top3": [
-        {
-          "score": "0-2",
-          "pct": 19.0
-        },
-        {
-          "score": "0-1",
-          "pct": 15.7
-        },
-        {
-          "score": "0-0",
-          "pct": 13.0
-        }
-      ],
-      "context": {
-        "team1_form": [
-          {
-            "opp": "Ghana",
-            "f": 0,
-            "m": 1,
-            "date": "2026-06-17"
-          },
-          {
-            "opp": "Croatia",
-            "f": 0,
-            "m": 1,
-            "date": "2026-06-23"
-          }
-        ],
-        "team2_form": [
-          {
-            "opp": "Croatia",
-            "f": 4,
-            "m": 2,
-            "date": "2026-06-17"
-          },
-          {
-            "opp": "Ghana",
-            "f": 0,
-            "m": 0,
             "date": "2026-06-23"
           }
         ]
