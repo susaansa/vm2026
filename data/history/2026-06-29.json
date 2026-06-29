@@ -3,172 +3,30 @@
   "predictions": [
     {
       "date": "2026-06-29",
-      "kickoff_utc": "2026-06-29T17:00Z",
-      "team1": "Brazil",
-      "team2": "Japan",
-      "group": "",
-      "ph": 0.4404,
-      "pu": 0.4052,
-      "pb": 0.1544,
-      "odds_h": 2.27,
-      "odds_u": 2.47,
-      "odds_b": 6.48,
-      "mode_score": "1-1",
-      "tip_score": "2-0",
-      "top3": [
-        {
-          "score": "1-1",
-          "pct": 18.8
-        },
-        {
-          "score": "0-0",
-          "pct": 18.0
-        },
-        {
-          "score": "2-0",
-          "pct": 10.8
-        }
-      ],
-      "context": {
-        "team1_form": [
-          {
-            "opp": "Morocco",
-            "f": 1,
-            "m": 1,
-            "date": "2026-06-13"
-          },
-          {
-            "opp": "Haiti",
-            "f": 3,
-            "m": 0,
-            "date": "2026-06-19"
-          },
-          {
-            "opp": "Scotland",
-            "f": 3,
-            "m": 0,
-            "date": "2026-06-24"
-          }
-        ],
-        "team2_form": [
-          {
-            "opp": "Netherlands",
-            "f": 2,
-            "m": 2,
-            "date": "2026-06-14"
-          },
-          {
-            "opp": "Tunisia",
-            "f": 4,
-            "m": 0,
-            "date": "2026-06-20"
-          },
-          {
-            "opp": "Sweden",
-            "f": 1,
-            "m": 1,
-            "date": "2026-06-25"
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-06-29",
-      "kickoff_utc": "2026-06-29T20:30Z",
-      "team1": "Germany",
-      "team2": "Paraguay",
-      "group": "",
-      "ph": 0.6336,
-      "pu": 0.2433,
-      "pb": 0.1231,
-      "odds_h": 1.58,
-      "odds_u": 4.11,
-      "odds_b": 8.12,
-      "mode_score": "1-1",
-      "tip_score": "2-1",
-      "top3": [
-        {
-          "score": "1-1",
-          "pct": 10.8
-        },
-        {
-          "score": "2-1",
-          "pct": 9.3
-        },
-        {
-          "score": "2-0",
-          "pct": 8.1
-        }
-      ],
-      "context": {
-        "team1_form": [
-          {
-            "opp": "Curaçao",
-            "f": 7,
-            "m": 1,
-            "date": "2026-06-14"
-          },
-          {
-            "opp": "Ivory Coast",
-            "f": 2,
-            "m": 1,
-            "date": "2026-06-20"
-          },
-          {
-            "opp": "Ecuador",
-            "f": 1,
-            "m": 2,
-            "date": "2026-06-25"
-          }
-        ],
-        "team2_form": [
-          {
-            "opp": "USA",
-            "f": 1,
-            "m": 4,
-            "date": "2026-06-12"
-          },
-          {
-            "opp": "Turkey",
-            "f": 1,
-            "m": 0,
-            "date": "2026-06-19"
-          },
-          {
-            "opp": "Australia",
-            "f": 0,
-            "m": 0,
-            "date": "2026-06-25"
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-06-29",
       "kickoff_utc": "2026-06-30T01:00Z",
       "team1": "Netherlands",
       "team2": "Morocco",
       "group": "",
-      "ph": 0.3881,
-      "pu": 0.2949,
-      "pb": 0.317,
-      "odds_h": 2.58,
-      "odds_u": 3.39,
-      "odds_b": 3.15,
+      "ph": 0.3507,
+      "pu": 0.3005,
+      "pb": 0.3488,
+      "odds_h": 2.85,
+      "odds_u": 3.33,
+      "odds_b": 2.87,
       "mode_score": "1-1",
       "tip_score": "2-1",
       "top3": [
         {
           "score": "1-1",
-          "pct": 12.2
+          "pct": 12.6
         },
         {
           "score": "2-1",
-          "pct": 8.1
+          "pct": 7.8
         },
         {
           "score": "1-2",
-          "pct": 7.3
+          "pct": 7.8
         }
       ],
       "context": {
@@ -220,18 +78,18 @@
       "team1": "France",
       "team2": "Sweden",
       "group": "",
-      "ph": 0.7501,
-      "pu": 0.1791,
-      "pb": 0.0708,
-      "odds_h": 1.33,
-      "odds_u": 5.58,
-      "odds_b": 14.12,
+      "ph": 0.7592,
+      "pu": 0.1745,
+      "pb": 0.0664,
+      "odds_h": 1.32,
+      "odds_u": 5.73,
+      "odds_b": 15.07,
       "mode_score": "3-0",
       "tip_score": "3-0",
       "top3": [
         {
           "score": "3-0",
-          "pct": 8.6
+          "pct": 8.8
         },
         {
           "score": "3-1",
@@ -239,7 +97,7 @@
         },
         {
           "score": "2-0",
-          "pct": 8.3
+          "pct": 8.4
         }
       ],
       "context": {
@@ -291,26 +149,26 @@
       "team1": "Ivory Coast",
       "team2": "Norway",
       "group": "",
-      "ph": 0.4051,
-      "pu": 0.3812,
-      "pb": 0.2138,
-      "odds_h": 2.47,
-      "odds_u": 2.62,
-      "odds_b": 4.68,
+      "ph": 0.3606,
+      "pu": 0.3863,
+      "pb": 0.2531,
+      "odds_h": 2.77,
+      "odds_u": 2.59,
+      "odds_b": 3.95,
       "mode_score": "1-1",
-      "tip_score": "2-1",
+      "tip_score": "1-1",
       "top3": [
         {
           "score": "1-1",
-          "pct": 18.4
+          "pct": 18.7
         },
         {
           "score": "0-0",
-          "pct": 13.7
+          "pct": 13.6
         },
         {
           "score": "2-1",
-          "pct": 9.2
+          "pct": 8.8
         }
       ],
       "context": {
@@ -362,26 +220,26 @@
       "team1": "Mexico",
       "team2": "Ecuador",
       "group": "",
-      "ph": 0.4686,
-      "pu": 0.4661,
-      "pb": 0.0653,
-      "odds_h": 2.13,
-      "odds_u": 2.15,
-      "odds_b": 15.31,
+      "ph": 0.5081,
+      "pu": 0.4375,
+      "pb": 0.0544,
+      "odds_h": 1.97,
+      "odds_u": 2.29,
+      "odds_b": 18.4,
       "mode_score": "0-0",
       "tip_score": "1-0",
       "top3": [
         {
           "score": "0-0",
-          "pct": 35.5
+          "pct": 32.9
         },
         {
           "score": "1-0",
-          "pct": 24.9
+          "pct": 25.5
         },
         {
           "score": "2-0",
-          "pct": 12.7
+          "pct": 14.2
         }
       ],
       "context": {
@@ -433,7 +291,7 @@
       "team1": "Belgium",
       "team2": "Senegal",
       "group": "",
-      "ph": 0.4121,
+      "ph": 0.4122,
       "pu": 0.3336,
       "pb": 0.2543,
       "odds_h": 2.43,
@@ -575,17 +433,17 @@
       "team1": "USA",
       "team2": "Bosnia & Herzegovina",
       "group": "",
-      "ph": 0.6449,
-      "pu": 0.1741,
-      "pb": 0.181,
-      "odds_h": 1.55,
-      "odds_u": 5.74,
-      "odds_b": 5.52,
-      "mode_score": "3-2",
-      "tip_score": "3-2",
+      "ph": 0.6981,
+      "pu": 0.1547,
+      "pb": 0.1472,
+      "odds_h": 1.43,
+      "odds_u": 6.46,
+      "odds_b": 6.8,
+      "mode_score": "4-1",
+      "tip_score": "4-1",
       "top3": [
         {
-          "score": "3-2",
+          "score": "4-1",
           "pct": 6.1
         },
         {
@@ -594,7 +452,7 @@
         },
         {
           "score": "4-2",
-          "pct": 5.7
+          "pct": 6.0
         }
       ],
       "context": {
@@ -648,7 +506,7 @@
       "group": "",
       "ph": 0.502,
       "pu": 0.3262,
-      "pb": 0.1718,
+      "pb": 0.1717,
       "odds_h": 1.99,
       "odds_u": 3.07,
       "odds_b": 5.82,
@@ -788,8 +646,8 @@
       "team1": "Switzerland",
       "team2": "Algeria",
       "group": "",
-      "ph": 0.6494,
-      "pu": 0.2366,
+      "ph": 0.6495,
+      "pu": 0.2365,
       "pb": 0.114,
       "odds_h": 1.54,
       "odds_u": 4.23,
@@ -930,18 +788,18 @@
       "team1": "Australia",
       "team2": "Egypt",
       "group": "",
-      "ph": 0.2185,
-      "pu": 0.5123,
-      "pb": 0.2692,
-      "odds_h": 4.58,
+      "ph": 0.2405,
+      "pu": 0.5141,
+      "pb": 0.2455,
+      "odds_h": 4.16,
       "odds_u": 1.95,
-      "odds_b": 3.71,
+      "odds_b": 4.07,
       "mode_score": "0-0",
       "tip_score": "0-0",
       "top3": [
         {
           "score": "0-0",
-          "pct": 32.5
+          "pct": 32.7
         },
         {
           "score": "1-1",
@@ -949,7 +807,7 @@
         },
         {
           "score": "0-1",
-          "pct": 12.9
+          "pct": 12.0
         }
       ],
       "context": {
