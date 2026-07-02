@@ -1,6 +1,6 @@
 {
-  "generated": "2026-07-02T00:01:22Z",
-  "upcoming": [
+  "date": "2026-07-02",
+  "predictions": [
     {
       "date": "2026-07-02",
       "kickoff_utc": "2026-07-02T23:00Z",
@@ -676,13 +676,5 @@
         ]
       }
     }
-  ],
-  "metrics": {
-    "n_evaluated": 45,
-    "brier_score": 0.1805,
-    "log_loss": 0.9899,
-    "exact_hit_rate": 0.1111,
-    "outcome_hit_rate": 0.6222
-  },
-  "model_params_n_matches": 81
+  ]
 }
