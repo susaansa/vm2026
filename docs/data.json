@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-02T16:47:55Z",
+  "generated": "2026-07-02T23:56:25Z",
   "upcoming": [
     {
       "date": "2026-07-02",
@@ -74,101 +74,30 @@
     },
     {
       "date": "2026-07-02",
-      "kickoff_utc": "2026-07-02T19:00Z",
-      "team1": "Spain",
-      "team2": "Austria",
-      "group": "",
-      "ph": 0.6893,
-      "pu": 0.2637,
-      "pb": 0.047,
-      "odds_h": 1.45,
-      "odds_u": 3.79,
-      "odds_b": 21.29,
-      "mode_score": "2-0",
-      "tip_score": "2-0",
-      "top3": [
-        {
-          "score": "2-0",
-          "pct": 15.5
-        },
-        {
-          "score": "1-1",
-          "pct": 12.4
-        },
-        {
-          "score": "0-0",
-          "pct": 11.2
-        }
-      ],
-      "context": {
-        "team1_form": [
-          {
-            "opp": "Cape Verde",
-            "f": 0,
-            "m": 0,
-            "date": "2026-06-15"
-          },
-          {
-            "opp": "Saudi Arabia",
-            "f": 4,
-            "m": 0,
-            "date": "2026-06-21"
-          },
-          {
-            "opp": "Uruguay",
-            "f": 1,
-            "m": 0,
-            "date": "2026-06-26"
-          }
-        ],
-        "team2_form": [
-          {
-            "opp": "Jordan",
-            "f": 3,
-            "m": 1,
-            "date": "2026-06-16"
-          },
-          {
-            "opp": "Argentina",
-            "f": 0,
-            "m": 2,
-            "date": "2026-06-22"
-          },
-          {
-            "opp": "Algeria",
-            "f": 3,
-            "m": 3,
-            "date": "2026-06-27"
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-07-02",
       "kickoff_utc": "2026-07-03T03:00Z",
       "team1": "Switzerland",
       "team2": "Algeria",
       "group": "",
-      "ph": 0.6458,
-      "pu": 0.2337,
-      "pb": 0.1205,
-      "odds_h": 1.55,
-      "odds_u": 4.28,
-      "odds_b": 8.3,
+      "ph": 0.7032,
+      "pu": 0.2043,
+      "pb": 0.0925,
+      "odds_h": 1.42,
+      "odds_u": 4.89,
+      "odds_b": 10.81,
       "mode_score": "1-1",
       "tip_score": "2-1",
       "top3": [
         {
           "score": "1-1",
-          "pct": 10.2
+          "pct": 8.9
         },
         {
           "score": "2-1",
-          "pct": 9.1
+          "pct": 8.6
         },
         {
           "score": "3-1",
-          "pct": 8.1
+          "pct": 8.4
         }
       ],
       "context": {
@@ -220,26 +149,26 @@
       "team1": "Argentina",
       "team2": "Cape Verde",
       "group": "",
-      "ph": 0.5768,
-      "pu": 0.3653,
-      "pb": 0.0579,
-      "odds_h": 1.73,
-      "odds_u": 2.74,
-      "odds_b": 17.27,
+      "ph": 0.4975,
+      "pu": 0.4158,
+      "pb": 0.0867,
+      "odds_h": 2.01,
+      "odds_u": 2.4,
+      "odds_b": 11.54,
       "mode_score": "0-0",
       "tip_score": "1-0",
       "top3": [
         {
           "score": "0-0",
-          "pct": 21.4
+          "pct": 24.7
         },
         {
           "score": "1-0",
-          "pct": 18.7
+          "pct": 18.0
         },
         {
-          "score": "2-0",
-          "pct": 16.2
+          "score": "1-1",
+          "pct": 15.5
         }
       ],
       "context": {
@@ -362,7 +291,7 @@
       "team1": "Colombia",
       "team2": "Ghana",
       "group": "",
-      "ph": 0.3064,
+      "ph": 0.3065,
       "pu": 0.5454,
       "pb": 0.1481,
       "odds_h": 3.26,
@@ -433,7 +362,7 @@
       "team1": "Canada",
       "team2": "Morocco",
       "group": "",
-      "ph": 0.3461,
+      "ph": 0.3462,
       "pu": 0.3944,
       "pb": 0.2594,
       "odds_h": 2.89,
@@ -765,7 +694,7 @@
       "team1": "USA",
       "team2": "Belgium",
       "group": "",
-      "ph": 0.4279,
+      "ph": 0.4278,
       "pu": 0.305,
       "pb": 0.2672,
       "odds_h": 2.34,
@@ -844,11 +773,11 @@
     }
   ],
   "metrics": {
-    "n_evaluated": 46,
-    "brier_score": 0.1777,
-    "log_loss": 0.9765,
-    "exact_hit_rate": 0.1087,
-    "outcome_hit_rate": 0.6304
+    "n_evaluated": 47,
+    "brier_score": 0.1751,
+    "log_loss": 0.9636,
+    "exact_hit_rate": 0.1064,
+    "outcome_hit_rate": 0.6383
   },
-  "model_params_n_matches": 82
+  "model_params_n_matches": 83
 }
