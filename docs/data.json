@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-03T09:50:18Z",
+  "generated": "2026-07-03T16:22:48Z",
   "upcoming": [
     {
       "date": "2026-07-03",
@@ -542,6 +542,89 @@
             "f": 2,
             "m": 1,
             "date": "2026-07-01"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-06",
+      "kickoff_utc": "2026-07-06T19:00Z",
+      "team1": "Portugal",
+      "team2": "Spain",
+      "group": "",
+      "ph": 0.1107,
+      "pu": 0.4758,
+      "pb": 0.4136,
+      "odds_h": 9.04,
+      "odds_u": 2.1,
+      "odds_b": 2.42,
+      "mode_score": "0-0",
+      "tip_score": "0-0",
+      "top3": [
+        {
+          "score": "0-0",
+          "pct": 31.6
+        },
+        {
+          "score": "0-1",
+          "pct": 19.3
+        },
+        {
+          "score": "1-1",
+          "pct": 15.0
+        }
+      ],
+      "context": {
+        "team1_form": [
+          {
+            "opp": "DR Congo",
+            "f": 1,
+            "m": 1,
+            "date": "2026-06-17"
+          },
+          {
+            "opp": "Uzbekistan",
+            "f": 5,
+            "m": 0,
+            "date": "2026-06-23"
+          },
+          {
+            "opp": "Colombia",
+            "f": 0,
+            "m": 0,
+            "date": "2026-06-27"
+          },
+          {
+            "opp": "Croatia",
+            "f": 2,
+            "m": 1,
+            "date": "2026-07-02"
+          }
+        ],
+        "team2_form": [
+          {
+            "opp": "Cape Verde",
+            "f": 0,
+            "m": 0,
+            "date": "2026-06-15"
+          },
+          {
+            "opp": "Saudi Arabia",
+            "f": 4,
+            "m": 0,
+            "date": "2026-06-21"
+          },
+          {
+            "opp": "Uruguay",
+            "f": 1,
+            "m": 0,
+            "date": "2026-06-26"
+          },
+          {
+            "opp": "Austria",
+            "f": 3,
+            "m": 0,
+            "date": "2026-07-02"
           }
         ]
       }
