@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-04T09:14:36Z",
+  "generated": "2026-07-04T15:59:45Z",
   "upcoming": [
     {
       "date": "2026-07-04",
@@ -495,6 +495,172 @@
             "f": 2,
             "m": 2,
             "date": "2026-07-01"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-07",
+      "kickoff_utc": "2026-07-07T16:00Z",
+      "team1": "Argentina",
+      "team2": "Egypt",
+      "group": "",
+      "ph": 0.4575,
+      "pu": 0.402,
+      "pb": 0.1404,
+      "odds_h": 2.19,
+      "odds_u": 2.49,
+      "odds_b": 7.12,
+      "mode_score": "1-1",
+      "tip_score": "2-0",
+      "top3": [
+        {
+          "score": "1-1",
+          "pct": 18.4
+        },
+        {
+          "score": "0-0",
+          "pct": 18.3
+        },
+        {
+          "score": "2-0",
+          "pct": 11.4
+        }
+      ],
+      "context": {
+        "team1_form": [
+          {
+            "opp": "Algeria",
+            "f": 3,
+            "m": 0,
+            "date": "2026-06-16"
+          },
+          {
+            "opp": "Austria",
+            "f": 2,
+            "m": 0,
+            "date": "2026-06-22"
+          },
+          {
+            "opp": "Jordan",
+            "f": 3,
+            "m": 1,
+            "date": "2026-06-27"
+          },
+          {
+            "opp": "Cape Verde",
+            "f": 1,
+            "m": 1,
+            "date": "2026-07-03"
+          }
+        ],
+        "team2_form": [
+          {
+            "opp": "Belgium",
+            "f": 1,
+            "m": 1,
+            "date": "2026-06-15"
+          },
+          {
+            "opp": "New Zealand",
+            "f": 3,
+            "m": 1,
+            "date": "2026-06-21"
+          },
+          {
+            "opp": "Iran",
+            "f": 1,
+            "m": 1,
+            "date": "2026-06-26"
+          },
+          {
+            "opp": "Australia",
+            "f": 1,
+            "m": 1,
+            "date": "2026-07-03"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-07",
+      "kickoff_utc": "2026-07-07T20:00Z",
+      "team1": "Switzerland",
+      "team2": "Colombia",
+      "group": "",
+      "ph": 0.2073,
+      "pu": 0.5062,
+      "pb": 0.2866,
+      "odds_h": 4.82,
+      "odds_u": 1.98,
+      "odds_b": 3.49,
+      "mode_score": "0-0",
+      "tip_score": "0-0",
+      "top3": [
+        {
+          "score": "0-0",
+          "pct": 31.6
+        },
+        {
+          "score": "1-1",
+          "pct": 17.6
+        },
+        {
+          "score": "0-1",
+          "pct": 13.3
+        }
+      ],
+      "context": {
+        "team1_form": [
+          {
+            "opp": "Qatar",
+            "f": 1,
+            "m": 1,
+            "date": "2026-06-13"
+          },
+          {
+            "opp": "Bosnia & Herzegovina",
+            "f": 4,
+            "m": 1,
+            "date": "2026-06-18"
+          },
+          {
+            "opp": "Canada",
+            "f": 2,
+            "m": 1,
+            "date": "2026-06-24"
+          },
+          {
+            "opp": "Algeria",
+            "f": 2,
+            "m": 0,
+            "date": "2026-07-02"
+          }
+        ],
+        "team2_form": [
+          {
+            "opp": "Uzbekistan",
+            "f": 3,
+            "m": 1,
+            "date": "2026-06-17"
+          },
+          {
+            "opp": "DR Congo",
+            "f": 1,
+            "m": 0,
+            "date": "2026-06-23"
+          },
+          {
+            "opp": "Portugal",
+            "f": 0,
+            "m": 0,
+            "date": "2026-06-27"
+          },
+          {
+            "opp": "Ghana",
+            "f": 1,
+            "m": 0,
+            "date": "2026-07-03"
           }
         ]
       }
