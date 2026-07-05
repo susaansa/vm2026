@@ -1,101 +1,18 @@
 {
-  "generated": "2026-07-05T16:05:25Z",
+  "generated": "2026-07-05T23:58:05Z",
   "upcoming": [
-    {
-      "date": "2026-07-05",
-      "kickoff_utc": "2026-07-05T20:00Z",
-      "team1": "Brazil",
-      "team2": "Norway",
-      "group": "",
-      "ph": 0.7091,
-      "pu": 0.1903,
-      "pb": 0.1006,
-      "odds_h": 1.41,
-      "odds_u": 5.25,
-      "odds_b": 9.94,
-      "mode_score": "3-1",
-      "tip_score": "3-1",
-      "top3": [
-        {
-          "score": "3-1",
-          "pct": 8.3
-        },
-        {
-          "score": "2-1",
-          "pct": 8.0
-        },
-        {
-          "score": "1-1",
-          "pct": 7.7
-        }
-      ],
-      "context": {
-        "team1_form": [
-          {
-            "opp": "Morocco",
-            "f": 1,
-            "m": 1,
-            "date": "2026-06-13"
-          },
-          {
-            "opp": "Haiti",
-            "f": 3,
-            "m": 0,
-            "date": "2026-06-19"
-          },
-          {
-            "opp": "Scotland",
-            "f": 3,
-            "m": 0,
-            "date": "2026-06-24"
-          },
-          {
-            "opp": "Japan",
-            "f": 2,
-            "m": 1,
-            "date": "2026-06-29"
-          }
-        ],
-        "team2_form": [
-          {
-            "opp": "Iraq",
-            "f": 4,
-            "m": 1,
-            "date": "2026-06-16"
-          },
-          {
-            "opp": "Senegal",
-            "f": 3,
-            "m": 2,
-            "date": "2026-06-22"
-          },
-          {
-            "opp": "France",
-            "f": 1,
-            "m": 4,
-            "date": "2026-06-26"
-          },
-          {
-            "opp": "Ivory Coast",
-            "f": 2,
-            "m": 1,
-            "date": "2026-06-30"
-          }
-        ]
-      }
-    },
     {
       "date": "2026-07-05",
       "kickoff_utc": "2026-07-06T00:00Z",
       "team1": "Mexico",
       "team2": "England",
       "group": "",
-      "ph": 0.5223,
-      "pu": 0.368,
-      "pb": 0.1097,
+      "ph": 0.5237,
+      "pu": 0.3672,
+      "pb": 0.1091,
       "odds_h": 1.91,
       "odds_u": 2.72,
-      "odds_b": 9.12,
+      "odds_b": 9.16,
       "mode_score": "1-1",
       "tip_score": "2-0",
       "top3": [
@@ -105,7 +22,7 @@
         },
         {
           "score": "0-0",
-          "pct": 16.2
+          "pct": 16.1
         },
         {
           "score": "2-0",
@@ -173,10 +90,10 @@
       "team1": "Portugal",
       "team2": "Spain",
       "group": "",
-      "ph": 0.1129,
-      "pu": 0.4757,
-      "pb": 0.4115,
-      "odds_h": 8.86,
+      "ph": 0.113,
+      "pu": 0.4758,
+      "pb": 0.4113,
+      "odds_h": 8.85,
       "odds_u": 2.1,
       "odds_b": 2.43,
       "mode_score": "0-0",
@@ -256,26 +173,26 @@
       "team1": "USA",
       "team2": "Belgium",
       "group": "",
-      "ph": 0.4016,
-      "pu": 0.3117,
-      "pb": 0.2867,
-      "odds_h": 2.49,
-      "odds_u": 3.21,
-      "odds_b": 3.49,
+      "ph": 0.3804,
+      "pu": 0.3157,
+      "pb": 0.3039,
+      "odds_h": 2.63,
+      "odds_u": 3.17,
+      "odds_b": 3.29,
       "mode_score": "1-1",
       "tip_score": "2-1",
       "top3": [
         {
           "score": "1-1",
-          "pct": 13.7
+          "pct": 13.9
         },
         {
           "score": "2-1",
-          "pct": 8.7
+          "pct": 8.5
         },
         {
           "score": "0-0",
-          "pct": 7.5
+          "pct": 7.7
         }
       ],
       "context": {
@@ -339,26 +256,26 @@
       "team1": "Argentina",
       "team2": "Egypt",
       "group": "",
-      "ph": 0.4495,
-      "pu": 0.4057,
-      "pb": 0.1448,
-      "odds_h": 2.22,
-      "odds_u": 2.46,
-      "odds_b": 6.9,
+      "ph": 0.4401,
+      "pu": 0.4092,
+      "pb": 0.1507,
+      "odds_h": 2.27,
+      "odds_u": 2.44,
+      "odds_b": 6.64,
       "mode_score": "1-1",
       "tip_score": "2-0",
       "top3": [
         {
           "score": "1-1",
-          "pct": 18.6
+          "pct": 18.8
         },
         {
           "score": "0-0",
-          "pct": 18.5
+          "pct": 18.6
         },
         {
           "score": "2-0",
-          "pct": 11.2
+          "pct": 11.0
         }
       ],
       "context": {
@@ -422,12 +339,12 @@
       "team1": "Switzerland",
       "team2": "Colombia",
       "group": "",
-      "ph": 0.1731,
-      "pu": 0.4981,
-      "pb": 0.3289,
-      "odds_h": 5.78,
+      "ph": 0.1709,
+      "pu": 0.4974,
+      "pb": 0.3317,
+      "odds_h": 5.85,
       "odds_u": 2.01,
-      "odds_b": 3.04,
+      "odds_b": 3.02,
       "mode_score": "0-0",
       "tip_score": "0-0",
       "top3": [
@@ -441,7 +358,7 @@
         },
         {
           "score": "0-1",
-          "pct": 15.0
+          "pct": 15.1
         }
       ],
       "context": {
@@ -498,14 +415,109 @@
           }
         ]
       }
+    },
+    {
+      "date": "2026-07-09",
+      "kickoff_utc": "2026-07-09T20:00Z",
+      "team1": "France",
+      "team2": "Morocco",
+      "group": "",
+      "ph": 0.4876,
+      "pu": 0.3896,
+      "pb": 0.1228,
+      "odds_h": 2.05,
+      "odds_u": 2.57,
+      "odds_b": 8.15,
+      "mode_score": "1-1",
+      "tip_score": "2-0",
+      "top3": [
+        {
+          "score": "1-1",
+          "pct": 17.8
+        },
+        {
+          "score": "0-0",
+          "pct": 17.8
+        },
+        {
+          "score": "2-0",
+          "pct": 12.2
+        }
+      ],
+      "context": {
+        "team1_form": [
+          {
+            "opp": "Senegal",
+            "f": 3,
+            "m": 1,
+            "date": "2026-06-16"
+          },
+          {
+            "opp": "Iraq",
+            "f": 3,
+            "m": 0,
+            "date": "2026-06-22"
+          },
+          {
+            "opp": "Norway",
+            "f": 4,
+            "m": 1,
+            "date": "2026-06-26"
+          },
+          {
+            "opp": "Sweden",
+            "f": 3,
+            "m": 0,
+            "date": "2026-06-30"
+          },
+          {
+            "opp": "Paraguay",
+            "f": 1,
+            "m": 0,
+            "date": "2026-07-04"
+          }
+        ],
+        "team2_form": [
+          {
+            "opp": "Brazil",
+            "f": 1,
+            "m": 1,
+            "date": "2026-06-13"
+          },
+          {
+            "opp": "Scotland",
+            "f": 1,
+            "m": 0,
+            "date": "2026-06-19"
+          },
+          {
+            "opp": "Haiti",
+            "f": 4,
+            "m": 2,
+            "date": "2026-06-24"
+          },
+          {
+            "opp": "Netherlands",
+            "f": 1,
+            "m": 1,
+            "date": "2026-06-29"
+          },
+          {
+            "opp": "Canada",
+            "f": 3,
+            "m": 0,
+            "date": "2026-07-04"
+          }
+        ]
+      }
     }
   ],
   "metrics": {
-    "n_evaluated": 54,
-    "brier_score": 0.1733,
-    "log_loss": 0.9434,
-    "exact_hit_rate": 0.1296,
-    "outcome_hit_rate": 0.6296
+    "n_evaluated": 55,
+    "brier_score": 0.1783,
+    "log_loss": 0.968,
+    "exact_hit_rate": 0.1273,
+    "outcome_hit_rate": 0.6182
   },
-  "model_params_n_matches": 90
+  "model_params_n_matches": 91
 }
