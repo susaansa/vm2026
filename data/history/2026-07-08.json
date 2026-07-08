@@ -193,6 +193,101 @@
     },
     {
       "date": "2026-07-11",
+      "kickoff_utc": "2026-07-12T01:00Z",
+      "team1": "Argentina",
+      "team2": "Switzerland",
+      "group": "",
+      "ph": 0.3335,
+      "pu": 0.4214,
+      "pb": 0.2451,
+      "odds_h": 3.0,
+      "odds_u": 2.37,
+      "odds_b": 4.08,
+      "mode_score": "1-1",
+      "tip_score": "1-1",
+      "top3": [
+        {
+          "score": "1-1",
+          "pct": 20.0
+        },
+        {
+          "score": "0-0",
+          "pct": 17.5
+        },
+        {
+          "score": "2-1",
+          "pct": 8.0
+        }
+      ],
+      "context": {
+        "team1_form": [
+          {
+            "opp": "Algeria",
+            "f": 3,
+            "m": 0,
+            "date": "2026-06-16"
+          },
+          {
+            "opp": "Austria",
+            "f": 2,
+            "m": 0,
+            "date": "2026-06-22"
+          },
+          {
+            "opp": "Jordan",
+            "f": 3,
+            "m": 1,
+            "date": "2026-06-27"
+          },
+          {
+            "opp": "Cape Verde",
+            "f": 1,
+            "m": 1,
+            "date": "2026-07-03"
+          },
+          {
+            "opp": "Egypt",
+            "f": 3,
+            "m": 2,
+            "date": "2026-07-07"
+          }
+        ],
+        "team2_form": [
+          {
+            "opp": "Qatar",
+            "f": 1,
+            "m": 1,
+            "date": "2026-06-13"
+          },
+          {
+            "opp": "Bosnia & Herzegovina",
+            "f": 4,
+            "m": 1,
+            "date": "2026-06-18"
+          },
+          {
+            "opp": "Canada",
+            "f": 2,
+            "m": 1,
+            "date": "2026-06-24"
+          },
+          {
+            "opp": "Algeria",
+            "f": 2,
+            "m": 0,
+            "date": "2026-07-02"
+          },
+          {
+            "opp": "Colombia",
+            "f": 0,
+            "m": 0,
+            "date": "2026-07-07"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-11",
       "kickoff_utc": "2026-07-11T21:00Z",
       "team1": "Norway",
       "team2": "England",
