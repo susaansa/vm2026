@@ -2,138 +2,31 @@
   "date": "2026-07-14",
   "predictions": [
     {
-      "date": "2026-07-14",
-      "kickoff_utc": "2026-07-14T19:00Z",
-      "team1": "France",
-      "team2": "Spain",
-      "group": "",
-      "ph": 0.2615,
-      "pu": 0.5169,
-      "pb": 0.2215,
-      "odds_h": 3.82,
-      "odds_u": 1.93,
-      "odds_b": 4.51,
-      "mode_score": "0-0",
-      "tip_score": "0-0",
-      "top3": [
-        {
-          "score": "0-0",
-          "pct": 33.4
-        },
-        {
-          "score": "1-1",
-          "pct": 17.1
-        },
-        {
-          "score": "1-0",
-          "pct": 13.0
-        }
-      ],
-      "context": {
-        "team1_form": [
-          {
-            "opp": "Senegal",
-            "f": 3,
-            "m": 1,
-            "date": "2026-06-16"
-          },
-          {
-            "opp": "Iraq",
-            "f": 3,
-            "m": 0,
-            "date": "2026-06-22"
-          },
-          {
-            "opp": "Norway",
-            "f": 4,
-            "m": 1,
-            "date": "2026-06-26"
-          },
-          {
-            "opp": "Sweden",
-            "f": 3,
-            "m": 0,
-            "date": "2026-06-30"
-          },
-          {
-            "opp": "Paraguay",
-            "f": 1,
-            "m": 0,
-            "date": "2026-07-04"
-          },
-          {
-            "opp": "Morocco",
-            "f": 2,
-            "m": 0,
-            "date": "2026-07-09"
-          }
-        ],
-        "team2_form": [
-          {
-            "opp": "Cape Verde",
-            "f": 0,
-            "m": 0,
-            "date": "2026-06-15"
-          },
-          {
-            "opp": "Saudi Arabia",
-            "f": 4,
-            "m": 0,
-            "date": "2026-06-21"
-          },
-          {
-            "opp": "Uruguay",
-            "f": 1,
-            "m": 0,
-            "date": "2026-06-26"
-          },
-          {
-            "opp": "Austria",
-            "f": 3,
-            "m": 0,
-            "date": "2026-07-02"
-          },
-          {
-            "opp": "Portugal",
-            "f": 1,
-            "m": 0,
-            "date": "2026-07-06"
-          },
-          {
-            "opp": "Belgium",
-            "f": 2,
-            "m": 1,
-            "date": "2026-07-10"
-          }
-        ]
-      }
-    },
-    {
       "date": "2026-07-15",
       "kickoff_utc": "2026-07-15T19:00Z",
       "team1": "England",
       "team2": "Argentina",
       "group": "",
-      "ph": 0.3748,
-      "pu": 0.3498,
-      "pb": 0.2754,
-      "odds_h": 2.67,
+      "ph": 0.3547,
+      "pu": 0.3495,
+      "pb": 0.2958,
+      "odds_h": 2.82,
       "odds_u": 2.86,
-      "odds_b": 3.63,
+      "odds_b": 3.38,
       "mode_score": "1-1",
       "tip_score": "2-1",
       "top3": [
         {
           "score": "1-1",
-          "pct": 16.5
+          "pct": 16.4
         },
         {
           "score": "0-0",
-          "pct": 10.3
+          "pct": 10.1
         },
         {
           "score": "2-1",
-          "pct": 9.0
+          "pct": 8.8
         }
       ],
       "context": {
