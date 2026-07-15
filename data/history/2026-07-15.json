@@ -2,35 +2,79 @@
   "date": "2026-07-15",
   "predictions": [
     {
-      "date": "2026-07-15",
-      "kickoff_utc": "2026-07-15T19:00Z",
-      "team1": "England",
-      "team2": "Argentina",
+      "date": "2026-07-18",
+      "kickoff_utc": "2026-07-18T21:00Z",
+      "team1": "France",
+      "team2": "England",
       "group": "",
-      "ph": 0.3546,
-      "pu": 0.3495,
-      "pb": 0.2959,
-      "odds_h": 2.82,
-      "odds_u": 2.86,
-      "odds_b": 3.38,
+      "ph": 0.5747,
+      "pu": 0.3161,
+      "pb": 0.1092,
+      "odds_h": 1.74,
+      "odds_u": 3.16,
+      "odds_b": 9.16,
       "mode_score": "1-1",
-      "tip_score": "2-1",
+      "tip_score": "2-0",
       "top3": [
         {
           "score": "1-1",
-          "pct": 16.4
+          "pct": 15.3
+        },
+        {
+          "score": "2-0",
+          "pct": 11.5
         },
         {
           "score": "0-0",
-          "pct": 10.1
-        },
-        {
-          "score": "2-1",
-          "pct": 8.8
+          "pct": 11.2
         }
       ],
       "context": {
         "team1_form": [
+          {
+            "opp": "Senegal",
+            "f": 3,
+            "m": 1,
+            "date": "2026-06-16"
+          },
+          {
+            "opp": "Iraq",
+            "f": 3,
+            "m": 0,
+            "date": "2026-06-22"
+          },
+          {
+            "opp": "Norway",
+            "f": 4,
+            "m": 1,
+            "date": "2026-06-26"
+          },
+          {
+            "opp": "Sweden",
+            "f": 3,
+            "m": 0,
+            "date": "2026-06-30"
+          },
+          {
+            "opp": "Paraguay",
+            "f": 1,
+            "m": 0,
+            "date": "2026-07-04"
+          },
+          {
+            "opp": "Morocco",
+            "f": 2,
+            "m": 0,
+            "date": "2026-07-09"
+          },
+          {
+            "opp": "Spain",
+            "f": 0,
+            "m": 2,
+            "date": "2026-07-14"
+          }
+        ],
+        "team2_form": [
           {
             "opp": "Croatia",
             "f": 4,
@@ -66,6 +110,87 @@
             "f": 1,
             "m": 1,
             "date": "2026-07-11"
+          },
+          {
+            "opp": "Argentina",
+            "f": 1,
+            "m": 2,
+            "date": "2026-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-19",
+      "kickoff_utc": "2026-07-19T19:00Z",
+      "team1": "Spain",
+      "team2": "Argentina",
+      "group": "",
+      "ph": 0.5985,
+      "pu": 0.3443,
+      "pb": 0.0572,
+      "odds_h": 1.67,
+      "odds_u": 2.9,
+      "odds_b": 17.48,
+      "mode_score": "0-0",
+      "tip_score": "1-0",
+      "top3": [
+        {
+          "score": "0-0",
+          "pct": 18.6
+        },
+        {
+          "score": "1-0",
+          "pct": 16.6
+        },
+        {
+          "score": "2-0",
+          "pct": 16.3
+        }
+      ],
+      "context": {
+        "team1_form": [
+          {
+            "opp": "Cape Verde",
+            "f": 0,
+            "m": 0,
+            "date": "2026-06-15"
+          },
+          {
+            "opp": "Saudi Arabia",
+            "f": 4,
+            "m": 0,
+            "date": "2026-06-21"
+          },
+          {
+            "opp": "Uruguay",
+            "f": 1,
+            "m": 0,
+            "date": "2026-06-26"
+          },
+          {
+            "opp": "Austria",
+            "f": 3,
+            "m": 0,
+            "date": "2026-07-02"
+          },
+          {
+            "opp": "Portugal",
+            "f": 1,
+            "m": 0,
+            "date": "2026-07-06"
+          },
+          {
+            "opp": "Belgium",
+            "f": 2,
+            "m": 1,
+            "date": "2026-07-10"
+          },
+          {
+            "opp": "France",
+            "f": 2,
+            "m": 0,
+            "date": "2026-07-14"
           }
         ],
         "team2_form": [
@@ -104,6 +229,12 @@
             "f": 1,
             "m": 1,
             "date": "2026-07-11"
+          },
+          {
+            "opp": "England",
+            "f": 2,
+            "m": 1,
+            "date": "2026-07-15"
           }
         ]
       }
