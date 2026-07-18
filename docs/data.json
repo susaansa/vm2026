@@ -1,151 +1,32 @@
 {
-  "generated": "2026-07-18T15:53:37Z",
+  "generated": "2026-07-18T23:43:14Z",
   "upcoming": [
-    {
-      "date": "2026-07-18",
-      "kickoff_utc": "2026-07-18T21:00Z",
-      "team1": "France",
-      "team2": "England",
-      "group": "",
-      "ph": 0.574,
-      "pu": 0.3164,
-      "pb": 0.1097,
-      "odds_h": 1.74,
-      "odds_u": 3.16,
-      "odds_b": 9.12,
-      "mode_score": "1-1",
-      "tip_score": "2-0",
-      "top3": [
-        {
-          "score": "1-1",
-          "pct": 15.3
-        },
-        {
-          "score": "2-0",
-          "pct": 11.5
-        },
-        {
-          "score": "0-0",
-          "pct": 11.2
-        }
-      ],
-      "context": {
-        "team1_form": [
-          {
-            "opp": "Senegal",
-            "f": 3,
-            "m": 1,
-            "date": "2026-06-16"
-          },
-          {
-            "opp": "Iraq",
-            "f": 3,
-            "m": 0,
-            "date": "2026-06-22"
-          },
-          {
-            "opp": "Norway",
-            "f": 4,
-            "m": 1,
-            "date": "2026-06-26"
-          },
-          {
-            "opp": "Sweden",
-            "f": 3,
-            "m": 0,
-            "date": "2026-06-30"
-          },
-          {
-            "opp": "Paraguay",
-            "f": 1,
-            "m": 0,
-            "date": "2026-07-04"
-          },
-          {
-            "opp": "Morocco",
-            "f": 2,
-            "m": 0,
-            "date": "2026-07-09"
-          },
-          {
-            "opp": "Spain",
-            "f": 0,
-            "m": 2,
-            "date": "2026-07-14"
-          }
-        ],
-        "team2_form": [
-          {
-            "opp": "Croatia",
-            "f": 4,
-            "m": 2,
-            "date": "2026-06-17"
-          },
-          {
-            "opp": "Ghana",
-            "f": 0,
-            "m": 0,
-            "date": "2026-06-23"
-          },
-          {
-            "opp": "Panama",
-            "f": 2,
-            "m": 0,
-            "date": "2026-06-27"
-          },
-          {
-            "opp": "DR Congo",
-            "f": 2,
-            "m": 1,
-            "date": "2026-07-01"
-          },
-          {
-            "opp": "Mexico",
-            "f": 3,
-            "m": 2,
-            "date": "2026-07-05"
-          },
-          {
-            "opp": "Norway",
-            "f": 1,
-            "m": 1,
-            "date": "2026-07-11"
-          },
-          {
-            "opp": "Argentina",
-            "f": 1,
-            "m": 2,
-            "date": "2026-07-15"
-          }
-        ]
-      }
-    },
     {
       "date": "2026-07-19",
       "kickoff_utc": "2026-07-19T19:00Z",
       "team1": "Spain",
       "team2": "Argentina",
       "group": "",
-      "ph": 0.5972,
-      "pu": 0.345,
-      "pb": 0.0578,
-      "odds_h": 1.67,
-      "odds_u": 2.9,
-      "odds_b": 17.29,
+      "ph": 0.5361,
+      "pu": 0.3924,
+      "pb": 0.0715,
+      "odds_h": 1.87,
+      "odds_u": 2.55,
+      "odds_b": 13.99,
       "mode_score": "0-0",
       "tip_score": "1-0",
       "top3": [
         {
           "score": "0-0",
-          "pct": 18.6
+          "pct": 23.2
         },
         {
           "score": "1-0",
-          "pct": 16.5
+          "pct": 18.6
         },
         {
           "score": "2-0",
-          "pct": 16.3
+          "pct": 15.0
         }
       ],
       "context": {
@@ -241,11 +122,11 @@
     }
   ],
   "metrics": {
-    "n_evaluated": 66,
-    "brier_score": 0.1859,
-    "log_loss": 0.9932,
-    "exact_hit_rate": 0.1515,
-    "outcome_hit_rate": 0.5909
+    "n_evaluated": 67,
+    "brier_score": 0.1892,
+    "log_loss": 1.0114,
+    "exact_hit_rate": 0.1493,
+    "outcome_hit_rate": 0.5821
   },
-  "model_params_n_matches": 102
+  "model_params_n_matches": 103
 }
