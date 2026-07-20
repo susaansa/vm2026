@@ -1,12 +1,12 @@
 {
-  "generated": "2026-07-20T09:50:37Z",
+  "generated": "2026-07-20T16:22:27Z",
   "upcoming": [],
   "metrics": {
-    "n_evaluated": 67,
-    "brier_score": 0.1892,
-    "log_loss": 1.0114,
-    "exact_hit_rate": 0.1493,
-    "outcome_hit_rate": 0.5821
+    "n_evaluated": 68,
+    "brier_score": 0.1896,
+    "log_loss": 1.0103,
+    "exact_hit_rate": 0.1471,
+    "outcome_hit_rate": 0.5735
   },
-  "model_params_n_matches": 103
+  "model_params_n_matches": 104
 }
